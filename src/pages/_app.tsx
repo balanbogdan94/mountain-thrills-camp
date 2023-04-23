@@ -1,6 +1,39 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
+import '@/styles/globals.css';
+import theme from '@/styles/theme';
+import { CacheProvider, EmotionCache, ThemeProvider } from '@emotion/react';
+import { CssBaseline } from '@mui/material';
+import type { AppProps } from 'next/app';
+import createEmotionCache from '../../config/createEmotionCache';
+import MountainThrillsCampLayout from '../../components/layout/MountainThrillsCampLayout';
+import { Asap } from 'next/font/google';
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+const clientSideEmotionCache = createEmotionCache();
+
+interface MyAppProps extends AppProps {
+	emotionCache?: EmotionCache;
+}
+
+const asapFont = Asap({
+	subsets: ['latin'],
+	weight: ['400', '500', '600', '700'],
+});
+
+export default function App({
+	Component,
+	pageProps,
+	emotionCache = clientSideEmotionCache,
+}: MyAppProps) {
+	return (
+		<main className={asapFont.className}>
+			<CacheProvider value={emotionCache}>
+				<ThemeProvider theme={theme}>
+					<CssBaseline />
+					<MountainThrillsCampLayout>
+						{/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+						<Component {...pageProps} />
+					</MountainThrillsCampLayout>
+				</ThemeProvider>
+			</CacheProvider>
+		</main>
+	);
 }
