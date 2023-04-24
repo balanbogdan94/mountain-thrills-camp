@@ -2,38 +2,44 @@ import { Grid, List, ListItem, ListItemText, Typography } from '@mui/material';
 import React from 'react';
 import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import Link from 'next/link';
 
 const Footer = () => {
 	return (
 		<Grid container sx={{ backgroundColor: '#0E0E0E' }}>
-			<Grid item xs={6}>
-				<List>
+			<Grid container xs={6} direction={'column'}>
+				<List sx={{ gap: '16px' }}>
 					<ListItem>
-						<ListItemText>Acasa</ListItemText>
+						<Link href={''}>Acasa</Link>
 					</ListItem>
 					<ListItem>
-						<ListItemText>Tabere de vara</ListItemText>
+						<Link href={''}>Tabere de vara</Link>
 					</ListItem>
 					<ListItem>
-						<ListItemText>Drumetii MTB</ListItemText>
+						<Link href={''}>Drumetii MTB</Link>
 					</ListItem>
 					<ListItem>
-						<ListItemText>Tabere SKI</ListItemText>
+						<Link href={''}>Tabere SKI</Link>
 					</ListItem>
 				</List>
 			</Grid>
-			<Grid xs={6} sx={{ alignContent: 'flex-end' }}>
+			<Grid container xs={6} direction={'column'} alignItems={'flex-end'}>
 				<>
 					<Typography fontWeight={600}>Contact</Typography>
-					<List>
-						<ListItem>
-							<ListItemText>(480)555-0103</ListItemText>
+					<List
+						sx={{
+							display: 'flex',
+							flexDirection: 'column',
+							justifyContent: 'flex-end',
+						}}>
+						<ListItem sx={{ justifyContent: 'flex-end' }}>
+							<Link href={''}>(480)555-0103</Link>
 						</ListItem>
-						<ListItem>
-							<ListItemText>(239)555-0108</ListItemText>
+						<ListItem sx={{ justifyContent: 'flex-end' }}>
+							<Link href={''}>(239)555-0108</Link>
 						</ListItem>
-						<ListItem>
-							<ListItemText>zeropoint@gmail.com</ListItemText>
+						<ListItem sx={{ justifyContent: 'flex-end' }}>
+							<Link href={''}>zeropoint@gmail.com</Link>
 						</ListItem>
 					</List>
 				</>
@@ -41,22 +47,30 @@ const Footer = () => {
 			<Grid item xs={6}>
 				<List>
 					<ListItem>
-						<ListItemText>Terms of service</ListItemText>
+						<Link href={''}>Terms of service</Link>
 					</ListItem>
 					<ListItem>
-						<ListItemText>Privacy policy</ListItemText>
+						<Link href={''}>Privacy policy</Link>
 					</ListItem>
 				</List>
 			</Grid>
-			<Grid item xs={6}>
+			<Grid container direction={'column'} alignItems={'flex-end'} xs={6}>
 				<Typography>Social media</Typography>
 				<List
-					sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+					sx={{
+						display: 'flex',
+						flexDirection: 'row',
+						justifyContent: 'flex-end',
+					}}>
 					<ListItem>
-						<InstagramIcon />
+						<Link href=''>
+							<InstagramIcon />
+						</Link>
 					</ListItem>
 					<ListItem>
-						<FacebookRoundedIcon />
+						<Link href={''}>
+							<FacebookRoundedIcon />
+						</Link>
 					</ListItem>
 				</List>
 			</Grid>
