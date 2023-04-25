@@ -2,7 +2,8 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { Inter } from 'next/font/google';
 import styles from '@/styles/Home.module.css';
-import { Button, List, ListItem, Typography } from '@mui/material';
+import { Button, List, ListItem, Stack, Typography } from '@mui/material';
+import CampTipeItem from '../../components/CampTipeItem';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -24,14 +25,25 @@ export default function Home() {
 				<Button variant='contained'>Contacteaza-ne</Button>
 				<Image src={'/Hero.png'} alt='hero' width={500} height={500} />
 				<List>
-					<ListItem></ListItem>
-					<ListItem></ListItem>
-					<ListItem></ListItem>
-					<ListItem></ListItem>
+					<BenefitItem
+						icon={'/benefits/Brain.svg'}
+						description={'Deprinderea de cunostinte noi'}
+					/>
+					<BenefitItem
+						icon={'/benefits/Yoga.svg'}
+						description={'Joaca, relaxare si distractie'}
+					/>
+					<BenefitItem
+						icon={'/benefits/LifeStyle.svg'}
+						description={'Incurajarea unui stil de viata activ'}
+					/>
+					<BenefitItem
+						icon={'/benefits/forest.svg'}
+						description={'Conectare cu mediul inconjurator'}
+					/>
 				</List>
-				<section>
-					<Typography variant='h2'>Despre noi</Typography>
-					<Typography variant='body1'>
+				<Section title={'Despre noi'}>
+					<Typography variant='body1' textAlign={'center'}>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 						eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
 						ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -39,15 +51,36 @@ export default function Home() {
 						reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
 						pariatur.
 					</Typography>
-				</section>
-				<section>
-					<Typography variant='h2'>Tabere de vara</Typography>
+				</Section>
+
+				<Section title='Tipuri de tabere'>
 					<List>
-						<ListItem></ListItem>
-						<ListItem></ListItem>
-						<ListItem></ListItem>
+						<CampTipeItem
+							imgSrc={'/camp-types/SummerCamp.png'}
+							title={'Tabere de vara'}
+							description={
+								'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris '
+							}
+							link={''}
+						/>
+						<CampTipeItem
+							imgSrc={'/camp-types/Bike.png'}
+							title={'Drumetii MTB'}
+							description={
+								'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris '
+							}
+							link={''}
+						/>
+						<CampTipeItem
+							imgSrc={'/camp-types/Ski.png'}
+							title={'Tabere SKI'}
+							description={
+								'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris '
+							}
+							link={''}
+						/>
 					</List>
-				</section>
+				</Section>
 				<section>
 					<Typography variant='h2'>Tipuri de tabere</Typography>
 					<List>
@@ -60,3 +93,40 @@ export default function Home() {
 		</>
 	);
 }
+
+const BenefitItem = ({
+	icon,
+	description,
+}: {
+	icon: string;
+	description: string;
+}) => {
+	return (
+		<ListItem>
+			<Stack alignItems={'center'}>
+				<Image src={icon} alt='brain icon' width={75} height={75} />
+				<Typography
+					textAlign={'center'}
+					fontWeight={600}
+					variant='body1'
+					style={{ maxWidth: '150px' }}>
+					{description}
+				</Typography>
+			</Stack>
+		</ListItem>
+	);
+};
+
+const Section: React.FC<{
+	title: string;
+	children: JSX.Element | JSX.Element[];
+}> = ({ title, children }) => (
+	<section
+		style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+		<Image src={'/sectionIcon.svg'} alt='section icon' width={50} height={50} />
+		<Typography fontWeight={600} variant='h4'>
+			{title}
+		</Typography>
+		{children}
+	</section>
+);
