@@ -4,8 +4,8 @@ import { CacheProvider, EmotionCache, ThemeProvider } from '@emotion/react';
 import { CssBaseline } from '@mui/material';
 import type { AppProps } from 'next/app';
 import createEmotionCache from '../../config/createEmotionCache';
-import MountainThrillsCampLayout from '../../components/layout/MountainThrillsCampLayout';
-import { Asap } from 'next/font/google';
+import MountainThrillsCampLayout from '../components/layout/MountainThrillsCampLayout';
+import { Asap, Karla } from 'next/font/google';
 
 const clientSideEmotionCache = createEmotionCache();
 
@@ -16,6 +16,13 @@ interface MyAppProps extends AppProps {
 const asapFont = Asap({
 	subsets: ['latin'],
 	weight: ['400', '500', '600', '700'],
+	variable: '--font-asap',
+});
+
+const karlaFont = Karla({
+	subsets: ['latin'],
+	weight: ['800'],
+	variable: '--font-karla',
 });
 
 export default function App({
@@ -24,7 +31,7 @@ export default function App({
 	emotionCache = clientSideEmotionCache,
 }: MyAppProps) {
 	return (
-		<main className={asapFont.className}>
+		<main className={`${asapFont.variable} ${karlaFont.variable}`}>
 			<CacheProvider value={emotionCache}>
 				<ThemeProvider theme={theme}>
 					<CssBaseline />

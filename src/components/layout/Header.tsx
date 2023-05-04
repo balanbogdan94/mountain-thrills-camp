@@ -1,11 +1,7 @@
 import {
 	Box,
-	Typography,
-	Divider,
 	List,
 	ListItem,
-	ListItemButton,
-	ListItemText,
 	Drawer,
 	AppBar,
 	CssBaseline,
@@ -15,16 +11,15 @@ import {
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import React from 'react';
+import Link from 'next/link';
 
-const navItems = [
-	'Acasa',
-	'Tabere de vara',
-	'Tabere MTB',
-	'Tabere SKI',
-	'Contact',
+export const navItems = [
+	{ name: 'Acasa', route: '/' },
+	{ name: 'Tabere de vara', route: '/tabere-de-vara' },
+	{ name: 'Drumetii MTB', route: '/drumetii-mtb' },
+	{ name: 'Tabere SKI', route: '/tabere-ski' },
+	{ name: 'Contact', route: '/contact' },
 ];
-
-const drawerWidth = 240;
 
 const Header = () => {
 	const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -35,7 +30,6 @@ const Header = () => {
 
 	return (
 		<Box sx={{ display: 'flex' }}>
-			<CssBaseline />
 			<AppBar component='nav' sx={{ zIndex: 2000 }}>
 				<Toolbar>
 					<IconButton
@@ -48,12 +42,11 @@ const Header = () => {
 					</IconButton>
 				</Toolbar>
 			</AppBar>
-			<Box component='nav'>
+			<Box>
 				<Drawer
 					variant='temporary'
 					anchor='top'
 					open={mobileOpen}
-					elevation={100}
 					onClose={handleDrawerToggle}
 					ModalProps={{
 						keepMounted: true, // Better open performance on mobile.
@@ -70,17 +63,8 @@ const Header = () => {
 						sx={{ textAlign: 'center', height: '100vh', paddingTop: '100px' }}>
 						<List>
 							{navItems.map((item) => (
-								<ListItem key={item} disablePadding>
-									<ListItemButton sx={{ textAlign: 'center' }}>
-										<ListItemText
-											primary={item}
-											primaryTypographyProps={{
-												fontSize: '24px',
-												fontWeight: '600',
-												lineHeight: '27.5px',
-											}}
-										/>
-									</ListItemButton>
+								<ListItem key={item.name} disablePadding>
+									<Link href={item.route}>{item.name}</Link>
 								</ListItem>
 							))}
 						</List>

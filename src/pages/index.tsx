@@ -2,8 +2,12 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { Inter } from 'next/font/google';
 import styles from '@/styles/Home.module.css';
-import { Button, List, ListItem, Stack, Typography } from '@mui/material';
-import CampTipeItem from '../../components/CampTipeItem';
+import { Box, Button, List, ListItem, Stack, Typography } from '@mui/material';
+import CampTipeItem from '../components/CampTipeItem';
+import { Section } from '../components/layout/Section';
+import FormSection from '../components/FormSection';
+import Link from 'next/link';
+import { navItems } from '@/components/layout/Header';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -17,33 +21,75 @@ export default function Home() {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<main className={styles.main}>
-				<Typography variant='h1'>Hai cu noi in tabara</Typography>
-				<Typography variant='body1'>
-					Tabere de schi, Scoala de schi, E-bike, Schi de tura, Tabere de vara
-					la munte!
-				</Typography>
-				<Button variant='contained'>Contacteaza-ne</Button>
-				<Image src={'/Hero.png'} alt='hero' width={500} height={500} />
-				<List>
-					<BenefitItem
-						icon={'/benefits/Brain.svg'}
-						description={'Deprinderea de cunostinte noi'}
-					/>
-					<BenefitItem
-						icon={'/benefits/Yoga.svg'}
-						description={'Joaca, relaxare si distractie'}
-					/>
-					<BenefitItem
-						icon={'/benefits/LifeStyle.svg'}
-						description={'Incurajarea unui stil de viata activ'}
-					/>
-					<BenefitItem
-						icon={'/benefits/forest.svg'}
-						description={'Conectare cu mediul inconjurator'}
-					/>
-				</List>
+				<section>
+					<Box
+						sx={{
+							display: 'flex',
+							flexDirection: 'column',
+							alignItems: 'center',
+							gap: '14px',
+							maxWidth: '50%',
+							margin: '0 auto',
+						}}>
+						<Typography
+							textAlign={'center'}
+							variant='h1'
+							lineHeight={'28px'}
+							sx={{ maxWidth: '150px' }}>
+							HAI CU NOI IN TABARA
+						</Typography>
+						<Typography variant='subtitle1' textAlign={'center'}>
+							Tabere de schi, Scoala de schi, E-bike, Schi de tura, Tabere de
+							vara la munte!
+						</Typography>
+						<Link
+							href={navItems.find((f) => f.name === 'Contact')?.route ?? ''}>
+							<Button variant='contained' color='secondary'>
+								Contacteaza-ne
+							</Button>
+						</Link>
+					</Box>
+					<Image src={'/Hero.png'} alt='hero' width={500} height={500} />
+					<List
+						sx={{
+							display: 'flex',
+							flexDirection: 'column',
+							gap: '32px',
+							width: '100%',
+							alignContent: 'center',
+						}}>
+						<BenefitItem
+							icon={'/benefits/Brain.svg'}
+							title={'Deprinderea de cunostinte noi'}
+						/>
+						<BenefitItem
+							icon={'/benefits/Yoga.svg'}
+							title={'Joaca, relaxare si distractie'}
+						/>
+						<BenefitItem
+							icon={'/benefits/LifeStyle.svg'}
+							title={'Incurajarea unui stil de viata activ'}
+						/>
+						<BenefitItem
+							icon={'/benefits/forest.svg'}
+							title={'Conectare cu mediul inconjurator'}
+						/>
+					</List>
+				</section>
 				<Section title={'Despre noi'}>
-					<Typography variant='body1' textAlign={'center'}>
+					<iframe
+						width='90%'
+						style={{
+							aspectRatio: '16/9',
+							borderRadius: '10px',
+							marginBottom: '35px',
+						}}
+						src='https://www.youtube.com/embed/RzVvThhjAKw?controls=0'
+						title='YouTube video player'
+						allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+						allowFullScreen
+					/>
+					<Typography variant='body1' textAlign={'center'} maxWidth={'80%'}>
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 						eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
 						ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -54,7 +100,7 @@ export default function Home() {
 				</Section>
 
 				<Section title='Tipuri de tabere'>
-					<List>
+					<List sx={{ display: 'flex', flexDirection: 'column', gap: '25px' }}>
 						<CampTipeItem
 							imgSrc={'/camp-types/SummerCamp.png'}
 							title={'Tabere de vara'}
@@ -81,14 +127,67 @@ export default function Home() {
 						/>
 					</List>
 				</Section>
-				<section>
-					<Typography variant='h2'>Tipuri de tabere</Typography>
-					<List>
-						<ListItem></ListItem>
-						<ListItem></ListItem>
-						<ListItem></ListItem>
+				<Section title='Ce ne caracterizeaza' backgroundColor='#267C58'>
+					<Image
+						src={'/caracterize-items/group.png'}
+						alt='group of people'
+						width={500}
+						height={500}
+					/>
+					<BenefitItem
+						icon={'/caracterize-items/1.svg'}
+						title='Profesionalism'
+						description='Ghizi si Instructori specializati si atestati  Ghizi Montani atestati si Monitori autorizati ISIA si AMPSR.'
+					/>
+					<BenefitItem
+						icon={'/caracterize-items/2.svg'}
+						title='Adaptare'
+						description='Indiferent de varsta, stângăcia si temerile clientilor echipa noastra e pregatita sa faca față celor mai dificile situatii.'
+					/>
+					<BenefitItem
+						icon={'/caracterize-items/4.svg'}
+						title='Siguranta'
+						description='Monitorii si ghizii nostri prin daruirea si profesionalismul fac ca si cea mai grea incercare sa para usoara.'
+					/>
+					<BenefitItem
+						icon={'/caracterize-items/3.svg'}
+						title='Rabdare si atentie'
+						description='Monitorii si ghizii nostri prin daruirea si profesionalismul fac ca si cea mai grea incercare sa para usoara.'
+					/>
+				</Section>
+				<Section title='Echipa'>
+					<List sx={{ display: 'flex', flexDirection: 'column', gap: '50px' }}>
+						<TeamItem
+							imageSrc={'/team/2.png'}
+							name={'Laura'}
+							description={
+								'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor  '
+							}
+						/>
+						<TeamItem
+							imageSrc={'/team/3.png'}
+							name={'Roxana'}
+							description={
+								'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor  '
+							}
+						/>
+						<TeamItem
+							imageSrc={'/team/4.png'}
+							name={'Gabi'}
+							description={
+								'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor  '
+							}
+						/>
+						<TeamItem
+							imageSrc={'/team/1.png'}
+							name={'Cosmin'}
+							description={
+								'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor  '
+							}
+						/>
 					</List>
-				</section>
+				</Section>
+				<FormSection />
 			</main>
 		</>
 	);
@@ -96,37 +195,53 @@ export default function Home() {
 
 const BenefitItem = ({
 	icon,
+	title,
 	description,
 }: {
 	icon: string;
-	description: string;
+	title: string;
+	description?: string;
 }) => {
 	return (
-		<ListItem>
-			<Stack alignItems={'center'}>
-				<Image src={icon} alt='brain icon' width={75} height={75} />
-				<Typography
-					textAlign={'center'}
-					fontWeight={600}
-					variant='body1'
-					style={{ maxWidth: '150px' }}>
-					{description}
-				</Typography>
+		<ListItem sx={{ justifyContent: 'center' }}>
+			<Stack alignItems={'center'} color={'secondary'}>
+				<Image src={icon} alt='brain icon' width={45} height={45} />
+				<Box color={'secondary'}>
+					<Typography
+						textAlign={'center'}
+						fontWeight={500}
+						fontSize={20}
+						style={{ maxWidth: '200px' }}>
+						{title}
+					</Typography>
+				</Box>
+				<Typography>{description}</Typography>
 			</Stack>
 		</ListItem>
 	);
 };
 
-const Section: React.FC<{
-	title: string;
-	children: JSX.Element | JSX.Element[];
-}> = ({ title, children }) => (
-	<section
-		style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-		<Image src={'/sectionIcon.svg'} alt='section icon' width={50} height={50} />
-		<Typography fontWeight={600} variant='h4'>
-			{title}
-		</Typography>
-		{children}
-	</section>
-);
+const TeamItem = (props: {
+	imageSrc: string;
+	name: string;
+	description?: string;
+}) => {
+	const { imageSrc, name, description } = props;
+	return (
+		<ListItem sx={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+			<Image
+				style={{ borderRadius: 200 }}
+				src={imageSrc}
+				alt={name}
+				width={150}
+				height={150}
+			/>
+			<Typography fontSize={'24px'} fontWeight={'600'} variant='h6'>
+				{name}
+			</Typography>
+			<Typography textAlign={'center'} maxWidth={'80%'}>
+				{description}
+			</Typography>
+		</ListItem>
+	);
+};

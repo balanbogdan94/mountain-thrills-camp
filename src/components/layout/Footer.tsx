@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 const Footer = () => {
 	return (
-		<Grid container sx={{ backgroundColor: '#0E0E0E' }}>
+		<Grid container>
 			<Grid container xs={6} direction={'column'}>
 				<List sx={{ gap: '16px' }}>
 					<ListItem>
@@ -46,9 +46,6 @@ const Footer = () => {
 			</Grid>
 			<Grid item xs={6}>
 				<List>
-					<ListItem>
-						<Link href={''}>Terms of service</Link>
-					</ListItem>
 					<ListItem>
 						<Link href={''}>Privacy policy</Link>
 					</ListItem>
