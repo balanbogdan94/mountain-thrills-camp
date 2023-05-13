@@ -3,8 +3,158 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 6rem;
+  padding: 64px 0;
   min-height: 100vh;
+  padding-top: 84px;
 }
+
+.hero{
+  width: 100%;
+}
+
+.heroBanner{
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+.heroContent {
+  gap: 14px;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 25ch;
+}
+
+.heroImage{ 
+  width: 100%;
+  aspect-ratio: 1/1;
+  position: relative; 
+}
+
+.heroImage > img {
+   object-fit: 'fill'
+}
+
+.contrastSection {
+  background-color: #267C58;
+  color: #ffffff;
+}
+
+.campTypeContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.benefitsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 100%;
+    align-content: 'center',
+}
+
+.teamContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 25px;
+  column-gap: 200px;
+}
+
+
+.characteristicsImage {
+width: 100vw;
+aspect-ratio: 1/1;
+position: relative;
+}
+
+.benefitsTextContent {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 80%;
+}
+
+@media screen and (width > 768px) {
+  .hero{
+    padding-top: 50px;
+  }
+  .heroBanner{
+    flex-direction: row;
+  }
+  .heroContent {
+    flex: 1;
+  }
+
+  .benefitsContainer{
+  flex-direction: row;
+  justify-content: center;
+  box-shadow: 0px 2px 12px rgba(195, 195, 195, 0.25);
+  }
+
+
+
+  .heroImage{
+    width: 50%;
+    flex: 0 0 70%;
+    aspect-ratio: unset;
+    min-height: 600px;
+    max-height: 900px;
+  }
+
+  .heroImage > img {
+    object-fit: contain;
+    object-position: right;
+ }
+
+ .campTypeContainer{
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+ }
+
+ .teamContainer {
+  flex-direction: row;
+  flex-wrap: wrap;
+ }
+
+ .characteristicsContainer {
+  width: 100%;
+  position: relative;
+ }
+
+ .contrastSection {
+  max-width: calc(60vw - 15px);
+  margin-left: 0;
+  margin-right: auto;
+ }
+
+ .characteristicsImage {
+  max-width: 40vw;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+ }
+
+ .benefitsTextContent{
+  flex-direction: row;
+  flex-wrap: wrap;
+ }
+
+ .benefitsTextContent > li {
+  max-width: 45%;
+  justify-content: flex-start;
+ }
+
+ .benefitsTextContent > li > div {
+   align-items: flex-start;
+ }
+
+ .benefitsTextContent > li > div > p {
+  text-align: left;
+ }
+}
+  
 
 

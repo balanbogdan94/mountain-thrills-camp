@@ -1,31 +1,32 @@
 import React from 'react';
 import { Section } from './layout/Section';
-import { Box, Button, FormGroup, TextField, Typography } from '@mui/material';
+import { Button, FormGroup, Stack, TextField, Typography } from '@mui/material';
+import style from './FormSection.module.css';
 
 const FormSection = () => {
 	return (
-		<Section title='Contacteaza-ne!'>
+		<Section className={style.formContainer} title='Contacteaza-ne!'>
 			<Typography variant='h6' textAlign={'center'} maxWidth={'70vw'}>
 				Daca vrei sa afli mai multe trimite-ne un mesaj
 			</Typography>
 			<FormGroup
+				className={style.form}
 				sx={{
 					display: 'flex',
 					flexDirection: 'column',
 					gap: '16px',
 					marginTop: '42px',
 				}}>
-				<Box display={'flex'} flexDirection={'column'} gap={'8px'}>
+				<Stack flexDirection={'column'} gap={'8px'} width={'100%'}>
 					<Typography variant='body1'>Nume si prenume</Typography>
 					<TextField
 						color='secondary'
 						id='outlined-basic'
-						sx={{ width: '80vw' }}
 						placeholder='Nume si prenume'
 						variant='outlined'
 					/>
-				</Box>
-				<Box display={'flex'} flexDirection={'column'} gap={'8px'}>
+				</Stack>
+				<Stack flexDirection={'column'} gap={'8px'}>
 					<Typography variant='body1'>Adresa de email</Typography>
 					<TextField
 						color='secondary'
@@ -33,8 +34,8 @@ const FormSection = () => {
 						placeholder='Adresa de email'
 						variant='outlined'
 					/>
-				</Box>
-				<Box display={'flex'} flexDirection={'column'} gap={'8px'}>
+				</Stack>
+				<Stack flexDirection={'column'} gap={'8px'}>
 					<Typography variant='body1'>Numar de telefon</Typography>
 					<TextField
 						color='secondary'
@@ -42,8 +43,8 @@ const FormSection = () => {
 						placeholder='Numar de telefon'
 						variant='outlined'
 					/>
-				</Box>
-				<Box display={'flex'} flexDirection={'column'} gap={'8px'}>
+				</Stack>
+				<Stack flexDirection={'column'} gap={'8px'}>
 					<Typography variant='body1'>Mesajul tau</Typography>
 					<TextField
 						id='outlined-multiline-static'
@@ -52,7 +53,7 @@ const FormSection = () => {
 						multiline
 						rows={4}
 					/>
-				</Box>
+				</Stack>
 				<Button
 					variant='contained'
 					color='secondary'

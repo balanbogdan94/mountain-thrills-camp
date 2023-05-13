@@ -1,0 +1,46 @@
+.menuContent {
+    margin-left: auto;
+}
+
+.hamburger {
+    display: inline;
+}
+
+.menuLinkContainer {
+display: none;
+}
+
+.menuItems {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    font-Weight: 600;
+}
+
+.hamburgerMenuContent {
+    margin: 0 auto;
+    justify-content: center;
+    height: 100vh;
+    padding-top: 100px;
+}
+
+.activeMenuItem{
+    color: #267C58;
+}
+
+@media screen and (width > 768px) {
+    .hamburger {
+        display: none;
+    }
+
+    .menuLinkContainer {
+        display: block;
+    }
+
+    .menuItems{
+        flex-direction: row;
+    }
+
+
+}
+    

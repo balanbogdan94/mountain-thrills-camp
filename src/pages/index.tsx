@@ -8,6 +8,8 @@ import { Section } from '../components/layout/Section';
 import FormSection from '../components/FormSection';
 import Link from 'next/link';
 import { navItems } from '@/components/layout/Header';
+import TeamItem from '@/components/TeamItem';
+import { BenefitItem } from '@/components/BenefitItem';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -21,43 +23,28 @@ export default function Home() {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<main className={styles.main}>
-				<section>
-					<Box
-						sx={{
-							display: 'flex',
-							flexDirection: 'column',
-							alignItems: 'center',
-							gap: '14px',
-							maxWidth: '50%',
-							margin: '0 auto',
-						}}>
-						<Typography
-							textAlign={'center'}
-							variant='h1'
-							lineHeight={'28px'}
-							sx={{ maxWidth: '150px' }}>
-							HAI CU NOI IN TABARA
-						</Typography>
-						<Typography variant='subtitle1' textAlign={'center'}>
-							Tabere de schi, Scoala de schi, E-bike, Schi de tura, Tabere de
-							vara la munte!
-						</Typography>
-						<Link
-							href={navItems.find((f) => f.name === 'Contact')?.route ?? ''}>
-							<Button variant='contained' color='secondary'>
-								Contacteaza-ne
-							</Button>
-						</Link>
-					</Box>
-					<Image src={'/Hero.png'} alt='hero' width={500} height={500} />
-					<List
-						sx={{
-							display: 'flex',
-							flexDirection: 'column',
-							gap: '32px',
-							width: '100%',
-							alignContent: 'center',
-						}}>
+				<section className={styles.hero}>
+					<Stack className={styles.heroBanner}>
+						<Stack className={styles.heroContent} alignItems={'center'}>
+							<Typography textAlign={'center'} variant='h1' lineHeight={'28px'}>
+								HAI CU NOI IN TABARA
+							</Typography>
+							<Typography variant='subtitle1' textAlign={'center'}>
+								Tabere de schi, Scoala de schi, E-bike, Schi de tura, Tabere de
+								vara la munte!
+							</Typography>
+							<Link
+								href={navItems.find((f) => f.name === 'Contact')?.route ?? ''}>
+								<Button variant='contained' color='secondary'>
+									Contacteaza-ne
+								</Button>
+							</Link>
+						</Stack>
+						<div className={styles.heroImage}>
+							<Image src={'/hero.jpg'} alt='hero' fill />
+						</div>
+					</Stack>
+					<List className={styles.benefitsContainer}>
 						<BenefitItem
 							icon={'/benefits/Brain.svg'}
 							title={'Deprinderea de cunostinte noi'}
@@ -100,7 +87,7 @@ export default function Home() {
 				</Section>
 
 				<Section title='Tipuri de tabere'>
-					<List sx={{ display: 'flex', flexDirection: 'column', gap: '25px' }}>
+					<List className={styles.campTypeContainer}>
 						<CampTipeItem
 							imgSrc={'/camp-types/SummerCamp.png'}
 							title={'Tabere de vara'}
@@ -127,36 +114,46 @@ export default function Home() {
 						/>
 					</List>
 				</Section>
-				<Section title='Ce ne caracterizeaza' backgroundColor='#267C58'>
-					<Image
-						src={'/caracterize-items/group.png'}
-						alt='group of people'
-						width={500}
-						height={500}
-					/>
-					<BenefitItem
-						icon={'/caracterize-items/1.svg'}
-						title='Profesionalism'
-						description='Ghizi si Instructori specializati si atestati  Ghizi Montani atestati si Monitori autorizati ISIA si AMPSR.'
-					/>
-					<BenefitItem
-						icon={'/caracterize-items/2.svg'}
-						title='Adaptare'
-						description='Indiferent de varsta, stângăcia si temerile clientilor echipa noastra e pregatita sa faca față celor mai dificile situatii.'
-					/>
-					<BenefitItem
-						icon={'/caracterize-items/4.svg'}
-						title='Siguranta'
-						description='Monitorii si ghizii nostri prin daruirea si profesionalismul fac ca si cea mai grea incercare sa para usoara.'
-					/>
-					<BenefitItem
-						icon={'/caracterize-items/3.svg'}
-						title='Rabdare si atentie'
-						description='Monitorii si ghizii nostri prin daruirea si profesionalismul fac ca si cea mai grea incercare sa para usoara.'
-					/>
-				</Section>
+				<div className={styles.characteristicsContainer}>
+					<Section
+						title='Ce ne caracterizeaza'
+						className={styles.contrastSection}>
+						<Stack gap={'30px'} alignItems={'center'}>
+							<div className={styles.characteristicsImage}>
+								<Image
+									src={'/caracterize-items/group.png'}
+									alt='group of people'
+									fill
+									style={{ objectFit: 'cover' }}
+								/>
+							</div>
+							<Stack className={styles.benefitsTextContent}>
+								<BenefitItem
+									icon={'/caracterize-items/1.svg'}
+									title='Profesionalism'
+									description='Ghizi si Instructori specializati si atestati  Ghizi Montani atestati si Monitori autorizati ISIA si AMPSR.'
+								/>
+								<BenefitItem
+									icon={'/caracterize-items/2.svg'}
+									title='Adaptare'
+									description='Indiferent de varsta, stângăcia si temerile clientilor echipa noastra e pregatita sa faca față celor mai dificile situatii.'
+								/>
+								<BenefitItem
+									icon={'/caracterize-items/4.svg'}
+									title='Siguranta'
+									description='Monitorii si ghizii nostri prin daruirea si profesionalismul fac ca si cea mai grea incercare sa para usoara.'
+								/>
+								<BenefitItem
+									icon={'/caracterize-items/3.svg'}
+									title='Rabdare si atentie'
+									description='Monitorii si ghizii nostri prin daruirea si profesionalismul fac ca si cea mai grea incercare sa para usoara.'
+								/>
+							</Stack>
+						</Stack>
+					</Section>
+				</div>
 				<Section title='Echipa'>
-					<List sx={{ display: 'flex', flexDirection: 'column', gap: '50px' }}>
+					<List className={styles.teamContainer}>
 						<TeamItem
 							imageSrc={'/team/2.png'}
 							name={'Laura'}
@@ -192,56 +189,3 @@ export default function Home() {
 		</>
 	);
 }
-
-const BenefitItem = ({
-	icon,
-	title,
-	description,
-}: {
-	icon: string;
-	title: string;
-	description?: string;
-}) => {
-	return (
-		<ListItem sx={{ justifyContent: 'center' }}>
-			<Stack alignItems={'center'} color={'secondary'}>
-				<Image src={icon} alt='brain icon' width={45} height={45} />
-				<Box color={'secondary'}>
-					<Typography
-						textAlign={'center'}
-						fontWeight={500}
-						fontSize={20}
-						style={{ maxWidth: '200px' }}>
-						{title}
-					</Typography>
-				</Box>
-				<Typography>{description}</Typography>
-			</Stack>
-		</ListItem>
-	);
-};
-
-const TeamItem = (props: {
-	imageSrc: string;
-	name: string;
-	description?: string;
-}) => {
-	const { imageSrc, name, description } = props;
-	return (
-		<ListItem sx={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
-			<Image
-				style={{ borderRadius: 200 }}
-				src={imageSrc}
-				alt={name}
-				width={150}
-				height={150}
-			/>
-			<Typography fontSize={'24px'} fontWeight={'600'} variant='h6'>
-				{name}
-			</Typography>
-			<Typography textAlign={'center'} maxWidth={'80%'}>
-				{description}
-			</Typography>
-		</ListItem>
-	);
-};

@@ -1,0 +1,5 @@
+.benefitImage {
+    width: clamp(45px, 40%, 90px);
+    aspect-ratio: 1/1;
+    position: relative;
+}

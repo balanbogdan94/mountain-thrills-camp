@@ -2,6 +2,7 @@ import { Box, ListItem, Typography } from '@mui/material';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import styles from './CampTypeItem.module.css';
 
 const CampTipeItem = (props: {
 	imgSrc: string;
@@ -11,13 +12,7 @@ const CampTipeItem = (props: {
 }) => {
 	const { imgSrc, title, description, link } = props;
 	return (
-		<ListItem
-			sx={{
-				position: 'relative',
-				width: '90vw',
-				aspectRatio: '1/1',
-				padding: 0,
-			}}>
+		<ListItem className={styles.listItem}>
 			<Image src={imgSrc} alt={title} fill style={{ borderRadius: '10px' }} />
 
 			<Box
