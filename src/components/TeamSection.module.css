@@ -1,0 +1,14 @@
+.teamContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 25px;
+    column-gap: 200px;
+  }
+
+  @media screen and (width > 768px) {
+    .teamContainer {
+            flex-direction: row;
+            flex-wrap: wrap;
+    }
+  }

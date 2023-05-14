@@ -25,11 +25,16 @@ export const Section: React.FC<{
 			<path
 				d='M21.3085 2L24.4752 7.21688M24.4752 7.21688L40.7332 34M24.4752 7.21688L27.8221 2M24.4752 7.21688L7.29238 34M40.7332 34H29.7995M40.7332 34H46.549M7.29238 34H2M7.29238 34H18.4006M18.4006 34L23.3955 25.7476C23.663 25.3057 24.3142 25.2999 24.5898 25.737L29.7995 34M18.4006 34H29.7995'
 				stroke={!!className ? 'white' : 'black'}
-				stroke-width='4'
-				stroke-linecap='round'
+				strokeWidth='4'
+				strokeLinecap='round'
 			/>
 		</svg>
-		<Typography fontWeight={600} variant='h2' marginBottom={'35px'}>
+		<Typography
+			fontWeight={600}
+			variant='h2'
+			marginBottom={'35px'}
+			textAlign={'center'}
+			maxWidth={'25ch'}>
 			{title}
 		</Typography>
 		{children}

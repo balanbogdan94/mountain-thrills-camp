@@ -17,6 +17,7 @@ const TeamItem = (props: {
 				alt={name}
 				width={200}
 				height={200}
+				priority={false}
 			/>
 			<div className={style.descriptionArea}>
 				<Typography

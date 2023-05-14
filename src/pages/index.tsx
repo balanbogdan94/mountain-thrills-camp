@@ -10,6 +10,7 @@ import Link from 'next/link';
 import { navItems } from '@/components/layout/Header';
 import TeamItem from '@/components/TeamItem';
 import { BenefitItem } from '@/components/BenefitItem';
+import { TeamSection } from '@/components/TeamSection';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -22,7 +23,7 @@ export default function Home() {
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
-			<main className={styles.main}>
+			<div className={styles.main}>
 				<section className={styles.hero}>
 					<Stack className={styles.heroBanner}>
 						<Stack className={styles.heroContent} alignItems={'center'}>
@@ -152,40 +153,9 @@ export default function Home() {
 						</Stack>
 					</Section>
 				</div>
-				<Section title='Echipa'>
-					<List className={styles.teamContainer}>
-						<TeamItem
-							imageSrc={'/team/2.png'}
-							name={'Laura'}
-							description={
-								'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor  '
-							}
-						/>
-						<TeamItem
-							imageSrc={'/team/3.png'}
-							name={'Roxana'}
-							description={
-								'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor  '
-							}
-						/>
-						<TeamItem
-							imageSrc={'/team/4.png'}
-							name={'Gabi'}
-							description={
-								'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor  '
-							}
-						/>
-						<TeamItem
-							imageSrc={'/team/1.png'}
-							name={'Cosmin'}
-							description={
-								'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor  '
-							}
-						/>
-					</List>
-				</Section>
+				<TeamSection />
 				<FormSection />
-			</main>
+			</div>
 		</>
 	);
 }

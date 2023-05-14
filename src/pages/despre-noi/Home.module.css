@@ -1,0 +1,18 @@
+.heroContainer {
+    background: url('/pages/about-us/hero.png');
+    background-position: center;
+    min-height: 400px;
+    max-height: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.aboutUsSectionImage {
+    position: relative;
+    height: 512px;
+    width: 100%;
+}

@@ -1,12 +1,13 @@
 import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
+import styles from './MountainThrillsCampLayout.module.css';
 
 const MountainThrillsCampLayout = (props: { children: React.ReactNode }) => {
 	return (
 		<>
 			<Header />
-			{props.children}
+			<main className={styles.mainContainer}>{props.children}</main>
 			<Footer />
 		</>
 	);

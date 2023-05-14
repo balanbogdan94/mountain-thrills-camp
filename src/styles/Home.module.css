@@ -3,9 +3,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding: 64px 0;
   min-height: 100vh;
-  padding-top: 84px;
 }
 
 .hero{
@@ -53,13 +51,7 @@
     align-content: 'center',
 }
 
-.teamContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  row-gap: 25px;
-  column-gap: 200px;
-}
+
 
 
 .characteristicsImage {
@@ -76,9 +68,6 @@ position: relative;
 }
 
 @media screen and (width > 768px) {
-  .hero{
-    padding-top: 50px;
-  }
   .heroBanner{
     flex-direction: row;
   }
