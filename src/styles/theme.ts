@@ -25,11 +25,11 @@ const theme = createTheme({
 		h1: {
 			fontFamily: 'Karla, sans-serif',
 			fontWeight: 800,
-			fontSize: '24px',
-			lineHeight: '28px',
+			fontSize: '32px',
+			lineHeight: '40px',
 			[`@media screen and (width > ${breakpoints.values.md}px)`]: {
-				fontSize: '72px',
-				lineHeight: '80px',
+				fontSize: '64px',
+				lineHeight: '70px',
 			},
 		},
 		h2: {
@@ -44,6 +44,17 @@ const theme = createTheme({
 			leadingTrim: 'both',
 			textEdge: 'cap',
 		},
+		subtitle2: {
+			fontSize: '12px',
+			[`@media screen and (width > ${breakpoints.values.md}px)`]: {
+				fontSize: '16px',
+				lineHeight: '20px',
+				fontWeight: '500',
+			},
+		},
+		body1: {},
+		body2: {},
+
 		button: {
 			fontWeight: 600,
 		},

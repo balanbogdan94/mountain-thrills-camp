@@ -1,3 +1,10 @@
+.headerContainer{
+    height: var(--header-height);
+    display: flex;
+    justify-content: center;
+    z-index: 2000;
+}
+
 .menuContent {
     margin-left: auto;
 }

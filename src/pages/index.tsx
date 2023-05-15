@@ -27,17 +27,17 @@ export default function Home() {
 				<section className={styles.hero}>
 					<Stack className={styles.heroBanner}>
 						<Stack className={styles.heroContent} alignItems={'center'}>
-							<Typography textAlign={'center'} variant='h1' lineHeight={'28px'}>
-								HAI CU NOI IN TABARA
+							<Typography textAlign={'center'} variant='h1'>
+								HAI CU NOI ÎN TABĂRĂ
 							</Typography>
-							<Typography variant='subtitle1' textAlign={'center'}>
-								Tabere de schi, Scoala de schi, E-bike, Schi de tura, Tabere de
-								vara la munte!
+							<Typography variant='subtitle2' textAlign={'center'}>
+								Tabere de schi, Scoăla de schi, E-bike, Schi de tură, Tabere de
+								vară la munte!
 							</Typography>
 							<Link
 								href={navItems.find((f) => f.name === 'Contact')?.route ?? ''}>
 								<Button variant='contained' color='secondary'>
-									Contacteaza-ne
+									Contactează-ne
 								</Button>
 							</Link>
 						</Stack>
@@ -46,22 +46,16 @@ export default function Home() {
 						</div>
 					</Stack>
 					<List className={styles.benefitsContainer}>
+						<BenefitItem icon={'/benefits/Rezultate.svg'} title={'Rezultate'} />
 						<BenefitItem
-							icon={'/benefits/Brain.svg'}
-							title={'Deprinderea de cunostinte noi'}
+							icon={'/benefits/Profesionalism.svg'}
+							title={'Profesionalism'}
 						/>
 						<BenefitItem
-							icon={'/benefits/Yoga.svg'}
-							title={'Joaca, relaxare si distractie'}
+							icon={'/benefits/Seriozitate.svg'}
+							title={'Seriozitate'}
 						/>
-						<BenefitItem
-							icon={'/benefits/LifeStyle.svg'}
-							title={'Incurajarea unui stil de viata activ'}
-						/>
-						<BenefitItem
-							icon={'/benefits/forest.svg'}
-							title={'Conectare cu mediul inconjurator'}
-						/>
+						<BenefitItem icon={'/benefits/Munca.svg'} title={'Muncă'} />
 					</List>
 				</section>
 				<Section title={'Despre noi'}>
@@ -77,31 +71,23 @@ export default function Home() {
 						allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
 						allowFullScreen
 					/>
-					<Typography variant='body1' textAlign={'center'} maxWidth={'80%'}>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-						eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-						ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-						aliquip ex ea commodo consequat. Duis aute irure dolor in
-						reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-						pariatur.
-					</Typography>
 				</Section>
 
 				<Section title='Tipuri de tabere'>
 					<List className={styles.campTypeContainer}>
 						<CampTipeItem
 							imgSrc={'/camp-types/SummerCamp.png'}
-							title={'Tabere de vara'}
+							title={'Tabere de vară'}
 							description={
-								'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris '
+								'Taberele de vară  sunt o oportunitate pentru fiecare copil pentru a-și dezvolta anumite abilități, dar și pentru a se distra, socializa și pentru a lega noi prietenii'
 							}
 							link={''}
 						/>
 						<CampTipeItem
 							imgSrc={'/camp-types/Bike.png'}
-							title={'Drumetii MTB'}
+							title={'Drumeții MTB'}
 							description={
-								'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris '
+								'Ciclismul  este una dintre cele mai bune metode de a te bucura de natură și de beneficiile incontestabile ale pedalatului pe două roți. Te invităm să te bucuri alături de noi pedalând '
 							}
 							link={''}
 						/>
@@ -109,7 +95,7 @@ export default function Home() {
 							imgSrc={'/camp-types/Ski.png'}
 							title={'Tabere SKI'}
 							description={
-								'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris '
+								'Taberele de schi și snowboard oferă copiiilor și adolesceților ocazia de a învăța să schieze și să se dea pe snowboard sub atenta îndrumare a unei echipe de monitori cu experiență și foști schiori de performanță'
 							}
 							link={''}
 						/>
@@ -117,37 +103,38 @@ export default function Home() {
 				</Section>
 				<div className={styles.characteristicsContainer}>
 					<Section
-						title='Ce ne caracterizeaza'
+						title='Obiectivele noastre'
 						className={styles.contrastSection}>
 						<Stack gap={'30px'} alignItems={'center'}>
 							<div className={styles.characteristicsImage}>
 								<Image
-									src={'/caracterize-items/group.png'}
+									src={'/objectives/group.webp'}
 									alt='group of people'
 									fill
 									style={{ objectFit: 'cover' }}
+									unoptimized
 								/>
 							</div>
 							<Stack className={styles.benefitsTextContent}>
 								<BenefitItem
-									icon={'/caracterize-items/1.svg'}
-									title='Profesionalism'
-									description='Ghizi si Instructori specializati si atestati  Ghizi Montani atestati si Monitori autorizati ISIA si AMPSR.'
+									icon={'/objectives/ExercitiuFizic.svg'}
+									title='Exercițiu fizic'
+									description='Promovarea exercițiului fizic, în aer liber, baza fiind schi-ul și biking-ul, desfășurat în deplină siguranță'
 								/>
 								<BenefitItem
-									icon={'/caracterize-items/2.svg'}
-									title='Adaptare'
-									description='Indiferent de varsta, stângăcia si temerile clientilor echipa noastra e pregatita sa faca față celor mai dificile situatii.'
+									icon={'/objectives/Educare.svg'}
+									title='Educare'
+									description='Educare prin sport și exercițiu fizic organizat, adoptarea unui stil de viață sănătos, precum și conectarea cu natura'
 								/>
 								<BenefitItem
-									icon={'/caracterize-items/4.svg'}
-									title='Siguranta'
-									description='Monitorii si ghizii nostri prin daruirea si profesionalismul fac ca si cea mai grea incercare sa para usoara.'
+									icon={'/objectives/ActivitatiRecreative.svg'}
+									title='Activități recreative'
+									description='Organizarea de activități recreative atât pentru copii cât și pentru familii'
 								/>
 								<BenefitItem
-									icon={'/caracterize-items/3.svg'}
-									title='Rabdare si atentie'
-									description='Monitorii si ghizii nostri prin daruirea si profesionalismul fac ca si cea mai grea incercare sa para usoara.'
+									icon={'/objectives/Dezvoltare.svg'}
+									title='Dezvoltare'
+									description='Motivarea pentru dezvoltarea capacităților fizice, a spiritului de echipă, a fair-play-ului și a competivități '
 								/>
 							</Stack>
 						</Stack>

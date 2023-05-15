@@ -13,23 +13,24 @@
 .heroBanner{
   flex-direction: column;
   margin-bottom: 25px;
+  padding-top: var(--padding-top-mobile);
 }
 
 .heroContent {
   gap: 14px;
   justify-content: center;
   margin: 0 auto;
-  max-width: 25ch;
+  max-width: 40ch;
 }
 
 .heroImage{ 
   width: 100%;
-  aspect-ratio: 1/1;
+  aspect-ratio: 4/3;
   position: relative; 
 }
 
 .heroImage > img {
-   object-fit: 'fill'
+   object-fit: 'contain'
 }
 
 .contrastSection {
@@ -51,9 +52,6 @@
     align-content: 'center',
 }
 
-
-
-
 .characteristicsImage {
 width: 100vw;
 aspect-ratio: 1/1;
@@ -70,18 +68,20 @@ position: relative;
 @media screen and (width > 768px) {
   .heroBanner{
     flex-direction: row;
+    margin-bottom: unset;
+
   }
   .heroContent {
     flex: 1;
+    padding-top: unset;
   }
 
   .benefitsContainer{
+  padding: 12px 24px;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   box-shadow: 0px 2px 12px rgba(195, 195, 195, 0.25);
   }
-
-
 
   .heroImage{
     width: 50%;

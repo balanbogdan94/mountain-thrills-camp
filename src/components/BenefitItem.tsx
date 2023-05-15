@@ -19,7 +19,7 @@ export const BenefitItem = ({
 				gap={'8px'}
 				position={'relative'}>
 				<div className={style.benefitImage}>
-					<Image src={icon} alt='brain icon' fill />
+					<Image src={icon} alt='brain icon' fill unoptimized />
 				</div>
 				<Box color={'secondary'}>
 					<Typography

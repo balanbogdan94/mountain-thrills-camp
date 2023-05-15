@@ -39,7 +39,8 @@
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
 
-  --tablet-max-width: 768px;
+  --header-height: 95px;
+  --padding-top-mobile: 20px;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -15,7 +15,7 @@ const AbouUs = () => {
 				<Typography variant='h1'>Despre noi</Typography>
 			</div>
 			<Section title='Despre noi'>
-				<Stack gap={'90px'} maxWidth={'900px'}>
+				<Stack gap={'50px'} maxWidth={'900px'}>
 					<Typography textAlign={'center'} fontWeight={'600'}>
 						Suntem o echipă de tineri instructori din Hunedoara extrem de
 						pasionați de interacțiunea cu copiii. Avem certificări atât

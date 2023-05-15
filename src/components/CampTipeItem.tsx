@@ -13,7 +13,13 @@ const CampTipeItem = (props: {
 	const { imgSrc, title, description, link } = props;
 	return (
 		<ListItem className={styles.listItem}>
-			<Image src={imgSrc} alt={title} fill style={{ borderRadius: '10px' }} />
+			<Image
+				src={imgSrc}
+				alt={title}
+				fill
+				style={{ borderRadius: '10px' }}
+				unoptimized
+			/>
 
 			<Box
 				sx={{ backgroundColor: '#000000B2' }}

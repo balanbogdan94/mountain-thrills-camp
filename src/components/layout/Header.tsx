@@ -53,9 +53,9 @@ const Header = () => {
 
 	return (
 		<>
-			<AppBar component='nav' sx={{ zIndex: 2000 }}>
+			<AppBar component='nav' className={style.headerContainer}>
 				<Toolbar>
-					<Image src={'/logoDark.svg'} alt='logo' width={60} height={60} />
+					<Image src={'/logo.svg'} alt='logo' width={90} height={90} />
 					<IconButton
 						className={`${style.menuContent} ${style.hamburger}`}
 						color='inherit'
