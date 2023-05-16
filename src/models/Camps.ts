@@ -1,0 +1,104 @@
+export enum CampType {
+	SKY,
+	MTB,
+	SUMMER,
+}
+
+export type CampItemType = {
+	id: string;
+	title: string;
+	type: CampType;
+	startDate: Date;
+	endDate: Date;
+	description: string;
+	activity: string[];
+	imageSrc: string;
+};
+
+export const camps: CampItemType[] = [
+	{
+		id: '90bf49ae-29ba-4bae-ab61-49f5a34d5b8a',
+		title: 'MTB Panorama Ghelari',
+		description:
+			'Panorama Ghelari este o atracție turistică impresionantă situată în localitatea Ghelari din județul Hunedoara, România. Cunoscută și sub numele de "Balconul Munților Apuseni", această panoramă oferă o vedere spectaculoasă asupra peisajului muntos din zonă.Panorama Ghelari oferă o oportunitate unică de a admira frumusețea naturală a zonei și de a te conecta cu liniștea și armonia pe care le oferă munții. De aici, poți să te relaxezi și să te bucuri de peisajul impresionant, să faci fotografii memorabile sau să te plimbi pe cărările marcate, explorând în detaliu această zonă sălbatică și fascinantă.',
+		type: CampType.MTB,
+		startDate: new Date('17.07.2023'),
+		endDate: new Date('22.07.2023'),
+		activity: ['Explorarea zonelor din Ghelari', 'Ture pe traseele montane'],
+		imageSrc:
+			'https://www.ghidul.ro/media/ghidul/imagini_principale/ghelari-panorama-ghelari-1.jpg',
+	},
+	{
+		id: '90bf49ae-29ba-4bae-ab61-49f5a34d5b8a',
+		title: 'MTB Viscri',
+		description:
+			'Satul Viscri este un pitoresc și fermecător sat tradițional din Transilvania, situat în județul Brașov, România. Cunoscut pentru peisajele sale rurale idilice și pentru patrimoniul său cultural, Viscri a fost inclus în lista Patrimoniului Mondial UNESCO, fiind recunoscut ca unul dintre cele mai bine conservate sate săsești din regiune. O plimbare prin satul Viscri te va purta prin peisaje rurale pitorești, cu dealuri verzi acoperite de pășuni și păduri de fag. Vizitarea acestui sat reprezintă o călătorie în timp și o oportunitate de a te conecta cu istoria și cultura unei comunități săsești unice.',
+		type: CampType.MTB,
+		startDate: new Date('17.07.2023'),
+		endDate: new Date('22.07.2023'),
+		activity: [
+			'Explorarea tradițiilor și a obiceiurilor săsești',
+			'Ture prin sat',
+			'Vizitarea muzeului satului',
+		],
+		imageSrc:
+			'https://www.ghidul.ro/media/ghidul/imagini_principale/ghelari-panorama-ghelari-1.jpg',
+	},
+	{
+		id: '90bf49ae-29ba-4bae-ab61-49f5a34d5b8a',
+		title: 'MTB Casa Cânda (Sălașul de Sus) - Ecoturism',
+		description:
+			'Aflat la poalele Munților Poiana Ruscă, Sălașul de Sus este înconjurat de păduri dese, văi adânci și pâraie cristaline. Aici vei găsi o natură nealterată și o liniște reconfortantă. Peisajul montan oferă oportunități excelente pentru drumeții și explorarea naturii.Datorită frumuseții naturale și a tradițiilor autentice, Sălașul de Sus este o destinație populară pentru iubitorii de ecoturism și turism rural. Poți experimenta stilul de viață tradițional, participând la activități meșteșugărești, cum ar fi prelucrarea lemnului sau țesutul.',
+		type: CampType.MTB,
+		startDate: new Date('17.07.2023'),
+		endDate: new Date('22.07.2023'),
+		activity: ['Explorarea zonelor din Sălașul de Sus'],
+		imageSrc:
+			'https://www.ghidul.ro/media/ghidul/imagini_principale/ghelari-panorama-ghelari-1.jpg',
+	},
+	{
+		id: '90bf49ae-29ba-4bae-ab61-49f5a34d5b8a',
+		title: 'Drumeție Cioclovina ( Tărâmuri Dacice )',
+		description:
+			'Parcul Natural Grădiștea Muncelului – Cioclovina cuprinde, între limitele sale, șase dintre cele mai spectaculoase rezervații naturale ale județului Hunedoara: Complexul carstic Ponorici-Cioclovina, Peștera Tecuri, Peștera Șura Mare, Cheile Crivadiei, Platoul Vârtoape, Locul fosilifer Ohaba-Ponor, Peștera Bolii. Totodată, aici se află siturile arheologice aflate în Patrimoniul UNESCO de la Sarmizegetusa Regia, Costești, Blidaru, Luncani-Piatra Roșie și așezările etnografice autentice din Platforma Luncanilor',
+		type: CampType.SUMMER,
+		startDate: new Date('17.07.2023'),
+		endDate: new Date('22.07.2023'),
+		activity: [
+			'Vizitarea peșterilor și avenelor din zonă',
+			'Prezentarea unor noțiuni speo și a unor noțiuni legate de specificul zonei',
+			'Orientare în mediul montan',
+			'Jocuri și concursuri outdoor ',
+		],
+		imageSrc:
+			'https://www.ghidul.ro/media/ghidul/imagini_principale/ghelari-panorama-ghelari-1.jpg',
+	},
+	{
+		id: '90bf49ae-29ba-4bae-ab61-49f5a34d5b8a',
+		title: 'Drumeție Apuseni',
+		description:
+			'Munții Apuseni este o destinație tradițională. Ne vom aventura pe trasee montane în care vom descoperi: pietrele Boghii, Cheile Somesului Cald, Molhasurile de la Izbuce Focul Viu, Lumea Pierdută,…etc, locuri numai bune pentru a înțelege releieful carstic alcătuit din peșteri, chei și defilee. Varietatea oferită de Apuseni îl face unic la noi în România datorită formelor sculptate de apă în rocile solubile . Pe lângă lecțiile de geneză și geologie predate de peisajul înconjurător, cei mici se vor bucura de aerul curat și pădurile Apusenilor.',
+		type: CampType.SUMMER,
+		startDate: new Date('17.07.2023'),
+		endDate: new Date('22.07.2023'),
+		activity: [
+			'Orientare în mediul montan',
+			'Jocuri și concursuri outdoor ',
+			'Noțiuni de supraviețuire',
+		],
+		imageSrc:
+			'https://www.ghidul.ro/media/ghidul/imagini_principale/ghelari-panorama-ghelari-1.jpg',
+	},
+	{
+		id: '90bf49ae-29ba-4bae-ab61-49f5a34d5b8a',
+		title: 'Drumeție Retezat',
+		description:
+			'Bijuteria Carpaților românești, masivul presărat cu 80 de oaze albastre în care se oglindește cerul. Dincolo de frumusețea sa sălbatică și unică și de liniștea absolută pe care ți-o oferă, masivul adăpostește o lume aparținând sprintenelor capre negre și miilor de plante care colorează culmile. În orice punct te conduc potecile, vei descoperi că în Retezat totul freamătă de viaț; natura pură a creat aici peisaje de excepție pentru care merită din plin să străbați cărările muntelui.',
+		type: CampType.SUMMER,
+		startDate: new Date('17.07.2023'),
+		endDate: new Date('22.07.2023'),
+		activity: ['Drumetii montane', 'Activitati sportive'],
+		imageSrc:
+			'https://www.ghidul.ro/media/ghidul/imagini_principale/ghelari-panorama-ghelari-1.jpg',
+	},
+];

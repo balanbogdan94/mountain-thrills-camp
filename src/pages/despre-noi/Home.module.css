@@ -16,3 +16,7 @@
     height: 512px;
     width: 100%;
 }
+
+.aboutUsSectionImage > img {
+    object-fit: cover;   
+}

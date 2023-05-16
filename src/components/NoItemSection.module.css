@@ -1,0 +1,6 @@
+.imageContainer {
+    position: relative;
+    width: 50vw;
+    max-width: 500px;
+    aspect-ratio: 1/1;
+}
