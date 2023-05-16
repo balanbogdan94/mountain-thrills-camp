@@ -27,3 +27,20 @@
     flex-direction: column;
     gap: 20px;
 }
+
+.containerSimple{
+    position: relative;
+    max-width: 90vw;
+    display: "flex";
+    flex-direction: column;
+    gap: 24px;
+}
+
+.imageSimple {
+    border-radius: 200px;
+}
+
+.descriptionAreaSimple {
+    text-align: center;
+    max-width: 30ch;
+}

@@ -25,11 +25,16 @@ const AbouUs = () => {
 						creativitate, flexibilitate și leadership
 					</Typography>
 					<div className={styles.aboutUsSectionImage}>
-						<Image src={'/pages/about-us/about-us-section.png'} fill alt={''} />
+						<Image
+							src={'/pages/about-us/about-us-section.png'}
+							fill
+							alt={''}
+							unoptimized
+						/>
 					</div>
 				</Stack>
 			</Section>
-			<TeamSection />
+			<TeamSection variant='Full' />
 			<ContactInfoSection />
 		</>
 	);

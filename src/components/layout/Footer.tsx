@@ -48,13 +48,12 @@ const Footer = () => {
 							fontWeight: '400',
 						}}>
 						<ListItem sx={{ justifyContent: 'flex-end' }}>
-							<Link href={''}>(480) 555-0103</Link>
+							<Link href={'tel:+40 768 762 045'}>+40 768 762 045</Link>
 						</ListItem>
 						<ListItem sx={{ justifyContent: 'flex-end' }}>
-							<Link href={''}>(239) 555-0108</Link>
-						</ListItem>
-						<ListItem sx={{ justifyContent: 'flex-end' }}>
-							<Link href={''}>zeropoint@gmail.com</Link>
+							<Link href={'mailto:Roxana.zeropoint@gmail.com'}>
+								Roxana.zeropoint@gmail.com
+							</Link>
 						</ListItem>
 					</List>
 				</Stack>
@@ -135,13 +134,12 @@ const Footer = () => {
 								fontWeight: '400',
 							}}>
 							<ListItem>
-								<Link href={''}>(480) 555-0103</Link>
+								<Link href={'tel:+40 768 762 045'}>+40 768 762 045</Link>
 							</ListItem>
 							<ListItem>
-								<Link href={''}>(239) 555-0108</Link>
-							</ListItem>
-							<ListItem>
-								<Link href={''}>zeropoint@gmail.com</Link>
+								<Link href={'mailto:Roxana.zeropoint@gmail.com'}>
+									Roxana.zeropoint@gmail.com
+								</Link>
 							</ListItem>
 						</List>
 					</div>
@@ -157,7 +155,9 @@ const Footer = () => {
 								gap: '16px',
 							}}>
 							<ListItem>
-								<Link href=''>
+								<Link
+									href='https://www.instagram.com/zeropoint.ro/'
+									target='_blank'>
 									<InstagramIcon fontSize='large' />
 								</Link>
 							</ListItem>

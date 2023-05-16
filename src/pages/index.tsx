@@ -140,7 +140,7 @@ export default function Home() {
 						</Stack>
 					</Section>
 				</div>
-				<TeamSection />
+				<TeamSection variant='Simple' />
 				<FormSection />
 			</div>
 		</>
