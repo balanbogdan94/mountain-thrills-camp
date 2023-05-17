@@ -15,7 +15,7 @@
 }
 
 .itemText {
-    align-items: flex-start;
+    align-items: center;
 }
 
 @media screen and (width > 768px) {
@@ -27,5 +27,8 @@
         align-self: center;
         flex-direction: row;
         gap: 16px;
+    }
+    .itemText {
+        align-items: flex-start;
     }
   }

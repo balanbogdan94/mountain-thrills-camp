@@ -39,6 +39,7 @@ const TeamItem = (props: {
 					{name}
 				</Typography>
 				<Typography textAlign={'center'}>{description}</Typography>
+				{props.variant === 'Full' ? props.items : null}
 			</div>
 		</ListItem>
 	);

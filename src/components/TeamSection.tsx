@@ -8,51 +8,114 @@ export const TeamSection = (props: { variant: 'Simple' | 'Full' }) => (
 		<List className={styles.teamContainer}>
 			<TeamItem
 				imageSrc={'/team/3.png'}
-				name={'Roxana'}
+				name={props.variant === 'Simple' ? 'Roxana' : 'Roxana Schiau'}
 				description={
-					'„Din tată în fiică", crescută pe munte având tatăl Șef al Serviciului Salvamont Hunedoara,organizator al taberelor de copii din munții Retezat'
+					props.variant === 'Simple'
+						? '„Din tată în fiică", crescută pe munte având tatăl Șef al Serviciului Salvamont Hunedoara,organizator al taberelor de copii din munții Retezat'
+						: '„Din tată în fiică", crescută pe munte având tatăl Șef al Servicului Salvamont Hunedoara, organizator al taberelor de copii din munții Retezat, a moștenit pasiune pentru cei mici, de a le insufla schiul, mersul pe munte, contactul cu natura, joacă, comunicarea, creativitatea ,siguranță, încrederea în ceea ce fac'
 				}
 				variant={props.variant}
+				items={
+					<ul className={styles.teamMemberItems}>
+						<li>
+							Peste 10 de ani de experiență ca monitor de schi, acreditat
+							internațional, ISIA
+						</li>
+						<li>Instructor coordonator de tabere vară/ iarnă</li>
+					</ul>
+				}
 			/>
 			<TeamItem
 				imageSrc={'/team/2.png'}
-				name={'Laura'}
+				name={props.variant === 'Simple' ? 'Laura' : 'Gaina Laura'}
 				description={
-					'A urcat pe munte prima dată la vârsta de 5 ani, și de atunci călătorește alături de copilul ei și alții copii pe care îi initiază în tainele schiului ,drumețiilor, a jocurilor în aer liber'
+					props.variant === 'Simple'
+						? 'A urcat pe munte prima dată la vârsta de 5 ani, și de atunci călătorește alături de copilul ei și alții copii pe care îi initiază în tainele schiului ,drumețiilor, a jocurilor în aer liber'
+						: 'A urcat pe munte prima dată la vârsta de 5 ani, și de atunci călătorește alături de copilul ei și alții copii pe care îi inițiază în tainele schiului ,drumețiilor, a jocurilor în aer liber'
 				}
 				variant={props.variant}
+				items={
+					<ul className={styles.teamMemberItems}>
+						<li>Experiență de 6 ani că monitor de ski</li>
+						<li>
+							Monitor schi (Internațional Schi Instructor Associations-ISIA)
+						</li>
+					</ul>
+				}
 			/>
 			<TeamItem
 				imageSrc={'/team/1.png'}
-				name={'Cosmin'}
+				name={props.variant === 'Simple' ? 'Cosmin' : 'Ion Cosmin'}
 				description={
-					'Un împătimit al snowbordului ,freestyle ,off-piste,al muntelui,al mountain bike'
+					props.variant === 'Simple'
+						? 'Un împătimit al snowbordului ,freestyle ,off-piste,al muntelui,al mountain bike'
+						: 'Un împătimit al snowbordului , freestyle ,off-piste,al muntelui,al mountain bike, Cosmin este un mebru al echipei care ne surprinde prin , muncă în echipă, flexibilitatea și strategiile de motivare a copiilor de a încerca ceva nou'
 				}
 				variant={props.variant}
+				items={
+					<ul className={styles.teamMemberItems}>
+						<li>Ghid turist național</li>
+						<li>
+							Monitor snowboard și schi(Internațional Schi Instructor
+							Associations-ISIA)
+						</li>
+					</ul>
+				}
 			/>
 			<TeamItem
 				imageSrc={'/team/4.png'}
-				name={'Gabi'}
+				name={props.variant === 'Simple' ? 'Gabi' : 'Gabriel Myklos'}
 				description={
-					'Cu o experiență montană deosebită,un alpinist și schior de performanță,un împătimit al MTB-ului'
+					props.variant === 'Simple'
+						? 'Cu o experiență montană deosebită,un alpinist și schior de performanță,un împătimit al MTB-ului'
+						: 'Cu o experiență montană deosebită,un alpinist și schior de performanță,un împătimit al MTB-ului ,Gabi este pentru copiii din tabere o sursă inepuizabilă de cunoștiințe,povești și energie pozitivă'
 				}
 				variant={props.variant}
+				items={
+					<ul className={styles.teamMemberItems}>
+						<li>Experiență de peste 7 ani</li>
+						<li>
+							Monitor schi (Internațional Schi Instructor Associations-ISIA)
+						</li>
+						<li>Alpinist calificat</li>
+					</ul>
+				}
 			/>
 			<TeamItem
 				imageSrc={'/team/5.png'}
-				name={'Bogdan'}
+				name={props.variant === 'Simple' ? 'Bogdan' : 'Manea Bogdan'}
 				description={
-					'Practică această meserie cu pasiune și devotament, este un bun cunoscător al traseelor montane și al tehnicilor de schi'
+					props.variant === 'Simple'
+						? 'Practică această meserie cu pasiune și devotament, este un bun cunoscător al traseelor montane și al tehnicilor de schi'
+						: 'Bogdan,pentru că a mers pe munte, a schiat și a mers cu mountain-bike-ul toată viața, s-a hotărât să transmită și copiilor pasiunile lui. Practică această meserie cu pasiune și devotament, este un bun cunoscător al traseelor montane și al tehnicilor de schi'
 				}
 				variant={props.variant}
+				items={
+					<ul className={styles.teamMemberItems}>
+						<li>Facultatea de Inginerie</li>
+						<li>Facultatea de Sociologie-Psihologie</li>
+						<li>Coordonator tabere vară-iarnă</li>
+						<li>Experientă de peste 10 ani</li>
+					</ul>
+				}
 			/>
 			<TeamItem
 				imageSrc={'/team/6.png'}
-				name={'Marian'}
+				name={props.variant === 'Simple' ? 'Marian' : 'Marian Florin'}
 				description={
-					'Crede în educația experiențială și este recunoscut ca unul dintre cel mai creativ,empatic și cu simțul umorului'
+					props.variant === 'Simple'
+						? 'Crede în educația experiențială și este recunoscut ca unul dintre cel mai creativ,empatic și cu simțul umorului'
+						: 'Florin este un foarte bun organizator al activităților pentru copii (atât outdoor cât și indoor). Crede în educația experientială și este recunoscut ca unul dintre cel mai creativ, empatic și cu simțul umorului '
 				}
 				variant={props.variant}
+				items={
+					<ul className={styles.teamMemberItems}>
+						<li>Ghid turist național</li>
+						<li>
+							Monitor schi (Internațional Schi Instructor Associations-ISIA)
+						</li>
+					</ul>
+				}
 			/>
 		</List>
 	</Section>

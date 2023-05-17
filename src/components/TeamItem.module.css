@@ -1,7 +1,7 @@
 .container{
     position: relative;
     width: 500px;
-    height: 600px;
+    height: 700px;
     max-width: 90vw;
 }
 
@@ -22,7 +22,7 @@
     height: calc(100% - 250px/2);
     margin-top: auto;
     margin-bottom: 0;
-    padding: 20% 42px 60px;
+    padding: 30% 42px 60px;
     display: flex;
     flex-direction: column;
     gap: 20px;

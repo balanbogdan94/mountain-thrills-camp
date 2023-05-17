@@ -5,10 +5,22 @@
     gap: 50px;
   }
 
+  .teamMemberItems {
+    display: flex;
+    flex-direction: column;
+    list-style-type: '\2713';
+    gap: 16px;
+  }
+ 
+
   @media screen and (width > 768px) {
     .teamContainer {
             flex-direction: row;
             flex-wrap: wrap;
             gap: 120px
+    }
+
+    .teamMemberItems {
+      padding-left: 2vw;
     }
   }
