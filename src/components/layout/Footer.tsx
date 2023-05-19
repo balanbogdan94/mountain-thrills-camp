@@ -101,7 +101,7 @@ const Footer = () => {
 			rowGap={'40px'}
 			alignItems={'center'}>
 			<Grid xs={6} item>
-				<Image src={'/logoDark.svg'} alt={'logo'} width={100} height={100} />
+				<Image src={'/logoDark.svg'} alt={'logo'} width={200} height={200} />
 			</Grid>
 			<Grid item xs={6}>
 				<Stack

@@ -22,11 +22,11 @@ export const camps: CampItemType[] = [
 		description:
 			'Panorama Ghelari este o atracție turistică impresionantă situată în localitatea Ghelari din județul Hunedoara, România. Cunoscută și sub numele de "Balconul Munților Apuseni", această panoramă oferă o vedere spectaculoasă asupra peisajului muntos din zonă.Panorama Ghelari oferă o oportunitate unică de a admira frumusețea naturală a zonei și de a te conecta cu liniștea și armonia pe care le oferă munții. De aici, poți să te relaxezi și să te bucuri de peisajul impresionant, să faci fotografii memorabile sau să te plimbi pe cărările marcate, explorând în detaliu această zonă sălbatică și fascinantă.',
 		type: CampType.MTB,
-		startDate: new Date('17.07.2023'),
+		startDate: new Date('07/17/2023'),
 		endDate: new Date('22.07.2023'),
 		activity: ['Explorarea zonelor din Ghelari', 'Ture pe traseele montane'],
 		imageSrc:
-			'https://www.ghidul.ro/media/ghidul/imagini_principale/ghelari-panorama-ghelari-1.jpg',
+			'https://zeropointstorage.blob.core.windows.net/images/WhatsApp%20Image%202023-03-29%20at%2019.21.15.webp',
 	},
 	{
 		id: '90bf49ae-29ba-4bae-ab61-49f5a34d5b8a',
@@ -42,7 +42,7 @@ export const camps: CampItemType[] = [
 			'Vizitarea muzeului satului',
 		],
 		imageSrc:
-			'https://www.ghidul.ro/media/ghidul/imagini_principale/ghelari-panorama-ghelari-1.jpg',
+			'https://zeropointstorage.blob.core.windows.net/images/WhatsApp%20Image%202023-03-29%20at%2020.05.59.webp',
 	},
 	{
 		id: '90bf49ae-29ba-4bae-ab61-49f5a34d5b8a',
@@ -54,7 +54,7 @@ export const camps: CampItemType[] = [
 		endDate: new Date('22.07.2023'),
 		activity: ['Explorarea zonelor din Sălașul de Sus'],
 		imageSrc:
-			'https://www.ghidul.ro/media/ghidul/imagini_principale/ghelari-panorama-ghelari-1.jpg',
+			'https://zeropointstorage.blob.core.windows.net/images/liviu-c-9HQiKoSlK_o-unsplash.webp',
 	},
 	{
 		id: '90bf49ae-29ba-4bae-ab61-49f5a34d5b8a',
@@ -71,7 +71,7 @@ export const camps: CampItemType[] = [
 			'Jocuri și concursuri outdoor ',
 		],
 		imageSrc:
-			'https://www.ghidul.ro/media/ghidul/imagini_principale/ghelari-panorama-ghelari-1.jpg',
+			'https://zeropointstorage.blob.core.windows.net/images/WhatsApp%20Image%202023-03-29%20at%2019.19.27.webp',
 	},
 	{
 		id: '90bf49ae-29ba-4bae-ab61-49f5a34d5b8a',
@@ -87,7 +87,7 @@ export const camps: CampItemType[] = [
 			'Noțiuni de supraviețuire',
 		],
 		imageSrc:
-			'https://www.ghidul.ro/media/ghidul/imagini_principale/ghelari-panorama-ghelari-1.jpg',
+			'https://zeropointstorage.blob.core.windows.net/images/Tabere-copii-2022-munte.webp',
 	},
 	{
 		id: '90bf49ae-29ba-4bae-ab61-49f5a34d5b8a',
@@ -99,6 +99,6 @@ export const camps: CampItemType[] = [
 		endDate: new Date('22.07.2023'),
 		activity: ['Drumetii montane', 'Activitati sportive'],
 		imageSrc:
-			'https://www.ghidul.ro/media/ghidul/imagini_principale/ghelari-panorama-ghelari-1.jpg',
+			'https://zeropointstorage.blob.core.windows.net/images/Retezat_Mountain_Lakes.webp',
 	},
 ];

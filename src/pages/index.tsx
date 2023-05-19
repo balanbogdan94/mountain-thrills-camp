@@ -24,6 +24,7 @@ export default function Home() {
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
 			<div className={styles.main}>
+				<div className={styles.Splah} />
 				<section className={styles.hero}>
 					<Stack className={styles.heroBanner}>
 						<Stack className={styles.heroContent} alignItems={'center'}>

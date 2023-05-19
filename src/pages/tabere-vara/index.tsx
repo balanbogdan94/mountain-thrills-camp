@@ -9,7 +9,7 @@ import Diversity1Icon from '@mui/icons-material/Diversity1';
 import Link from 'next/link';
 
 const MtbCamp = () => {
-	const items = camps && camps.filter((camp) => camp.type === CampType.MTB);
+	const items = camps && camps.filter((camp) => camp.type === CampType.SUMMER);
 
 	if (items.length === 0) return <NoItemSection />;
 	return (
@@ -31,7 +31,7 @@ const MtbCamp = () => {
 							{item.title}
 						</Typography>
 						<Typography variant='subtitle1'>
-							{item.startDate + '-' + item.endDate}
+							{item.startDate.toLocaleString() + '-' + item.endDate}
 						</Typography>
 						<Typography className={styles.itemText}>
 							{item.description}
