@@ -38,7 +38,7 @@ const ContactInfoSection = () => {
 									Trimite-ne un mesaj
 								</Typography>
 								<Typography fontSize={'20px'} fontWeight={900}>
-									zeropoint@gmail.com
+									Roxana.zeropoint@gmail.com
 								</Typography>
 							</Stack>
 						</Stack>

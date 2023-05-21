@@ -81,7 +81,7 @@ export default function Home() {
 							description={
 								'Taberele de vară  sunt o oportunitate pentru fiecare copil pentru a-și dezvolta anumite abilități, dar și pentru a se distra, socializa și pentru a lega noi prietenii'
 							}
-							link={''}
+							link={Routes.get('Tabere de vară') ?? ''}
 						/>
 						<CampTipeItem
 							imgSrc={'/camp-types/Bike.png'}
@@ -89,7 +89,7 @@ export default function Home() {
 							description={
 								'Ciclismul  este una dintre cele mai bune metode de a te bucura de natură și de beneficiile incontestabile ale pedalatului pe două roți. Te invităm să te bucuri alături de noi pedalând '
 							}
-							link={''}
+							link={Routes.get('Tabere MTB') ?? ''}
 						/>
 						<CampTipeItem
 							imgSrc={'/camp-types/Ski.png'}
@@ -97,7 +97,7 @@ export default function Home() {
 							description={
 								'Taberele de schi și snowboard oferă copiiilor și adolesceților ocazia de a învăța să schieze și să se dea pe snowboard sub atenta îndrumare a unei echipe de monitori cu experiență și foști schiori de performanță'
 							}
-							link={''}
+							link={Routes.get('Tabere SKI') ?? ''}
 						/>
 					</List>
 				</Section>

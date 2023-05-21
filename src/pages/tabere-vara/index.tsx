@@ -7,6 +7,8 @@ import Image from 'next/image';
 import styles from './mtb-trips.module.css';
 import Diversity1Icon from '@mui/icons-material/Diversity1';
 import Link from 'next/link';
+import CampTypeIcon from '@/components/CampTypeIcon';
+import CampDateItem from '@/components/CampDateItem';
 
 const MtbCamp = () => {
 	const items = camps && camps.filter((camp) => camp.type === CampType.SUMMER);
@@ -15,8 +17,8 @@ const MtbCamp = () => {
 	return (
 		<Stack alignItems={'center'} gap={'100px'}>
 			<div className={styles.heroContainer}>
-				<Diversity1Icon fontSize='large' />
-				<Typography variant='h1'>Drumeții MTB</Typography>
+				<CampTypeIcon type={CampType.SUMMER} />
+				<Typography variant='h1'>TABERE DE VARĂ</Typography>
 			</div>
 			{items.map((item, index) => (
 				<Stack key={item.id} className={styles.itemContainer}>
@@ -31,7 +33,7 @@ const MtbCamp = () => {
 							{item.title}
 						</Typography>
 						<Typography variant='subtitle1'>
-							{item.startDate.toLocaleString() + '-' + item.endDate}
+							<CampDateItem startDate={item.startDate} endDate={item.endDate} />
 						</Typography>
 						<Typography className={styles.itemText}>
 							{item.description}

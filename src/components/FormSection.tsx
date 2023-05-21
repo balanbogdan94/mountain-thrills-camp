@@ -35,6 +35,7 @@ const FormSection = () => {
 							id='outlined-basic'
 							placeholder='Nume si prenume'
 							variant='outlined'
+							required
 						/>
 					</Stack>
 					<Stack flexDirection={'column'} gap={'8px'}>
@@ -45,6 +46,8 @@ const FormSection = () => {
 							name='Adresa de email'
 							placeholder='Adresa de email'
 							variant='outlined'
+							type='email'
+							required
 						/>
 					</Stack>
 					<Stack flexDirection={'column'} gap={'8px'}>
@@ -53,8 +56,10 @@ const FormSection = () => {
 							color='secondary'
 							id='outlined-basic'
 							name='Numar de telefon'
+							type='number'
 							placeholder='Numar de telefon'
 							variant='outlined'
+							required
 						/>
 					</Stack>
 					<Stack flexDirection={'column'} gap={'8px'}>
