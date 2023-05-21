@@ -60,11 +60,15 @@ gap: 32px;
     .imageSecound{
         order:10
     }
+
     
     .imageContainer > img {
-        border-radius: unset;
+        border-radius: 8px 0px 0px 8px;
     }
-
+    
+    .imageSecound > img {
+        border-radius: 0px 8px 8px 0px;
+    }
     .itemInfoArea {
         align-items: flex-start;
         padding: 24px;

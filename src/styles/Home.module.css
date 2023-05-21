@@ -73,7 +73,7 @@ position: relative;
   left: 0;
   background-image: url('/header-splash.svg');
   background-size: contain;
-  width: clamp(100px,20vw,300px);
+  width: clamp(100px,15vw,300px);
   aspect-ratio: 1/1;
   background-repeat: no-repeat;
   z-index: 0;
@@ -88,6 +88,11 @@ position: relative;
   .heroContent {
     flex: 1;
     padding-top: unset;
+    align-items: flex-start;
+  }
+
+  .heroContent > * {
+    text-align: left;
   }
 
   .benefitsContainer{
@@ -127,7 +132,7 @@ position: relative;
  }
 
  .contrastSection {
-  max-width: calc(60vw - 15px);
+  max-width: 60vw;
   margin-left: 0;
   margin-right: auto;
  }
@@ -143,6 +148,7 @@ position: relative;
  .benefitsTextContent{
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: flex-start;
  }
 
  .benefitsTextContent > li {

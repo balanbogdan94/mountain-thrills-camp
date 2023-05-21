@@ -13,7 +13,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import Link from 'next/link';
 import style from './Footer.module.css';
 import Image from 'next/image';
-import { navItems } from './Header';
+import { navItems } from '@/models/Routes';
 
 const Footer = () => {
 	const matches = useMediaQuery('(width < 768px)');

@@ -2,15 +2,15 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { Inter } from 'next/font/google';
 import styles from '@/styles/Home.module.css';
-import { Box, Button, List, ListItem, Stack, Typography } from '@mui/material';
+import { Button, List, ListItem, Stack, Typography } from '@mui/material';
 import CampTipeItem from '../components/CampTipeItem';
 import { Section } from '../components/layout/Section';
 import FormSection from '../components/FormSection';
 import Link from 'next/link';
-import { navItems } from '@/components/layout/Header';
-import hero from '../public/hero.webp';
 import { BenefitItem } from '@/components/BenefitItem';
 import { TeamSection } from '@/components/TeamSection';
+import { Routes } from '@/models/Routes';
+import CampsCarousel from '@/components/CampsCarousel';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -35,8 +35,7 @@ export default function Home() {
 								Tabere de schi, Scoăla de schi, E-bike, Schi de tură, Tabere de
 								vară la munte!
 							</Typography>
-							<Link
-								href={navItems.find((f) => f.name === 'Contact')?.route ?? ''}>
+							<Link href={Routes.get('Contact') ?? ''}>
 								<Button variant='contained' color='secondary'>
 									Contactează-ne
 								</Button>
@@ -142,6 +141,9 @@ export default function Home() {
 					</Section>
 				</div>
 				<TeamSection variant='Simple' />
+				<Section title='Următoarele tabere'>
+					<CampsCarousel />
+				</Section>
 				<FormSection />
 			</div>
 		</>

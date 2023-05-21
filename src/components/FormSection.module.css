@@ -1,6 +1,34 @@
-
-
+.formContainer {
+    position: relative;
+}
 .form {
     width: 80vw;
     max-width: 500px;
+}
+
+.blobTop {
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: url('/blob2.svg');
+        background-size: contain;
+        width: clamp(200px,25vw,400px);
+        aspect-ratio: 1/1;
+        background-repeat: no-repeat;
+        z-index: 0;
+      
+}
+
+.blobBottom {
+    position: absolute;
+    bottom: calc(0px - var(--header-height));
+    right: 0;
+    background-image: url('/blob3.svg');
+    background-size: contain;
+    width: clamp(200px,25vw,400px);
+    aspect-ratio: 1/1;
+    background-repeat: no-repeat;
+    background-position: right;
+    z-index: 0;
 }

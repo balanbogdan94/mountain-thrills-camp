@@ -14,15 +14,7 @@ import Link from 'next/link';
 import style from './Header.module.css';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-
-export const navItems = [
-	{ name: 'Acasa', route: '/' },
-	{ name: 'Despre noi', route: '/despre-noi' },
-	{ name: 'Tabere de vara', route: '/tabere-vara' },
-	{ name: 'Drumetii MTB', route: '/drumetii-mtb' },
-	{ name: 'Tabere SKI', route: '/tabere-ski' },
-	{ name: 'Contact', route: '/contact' },
-];
+import { navItems } from '@/models/Routes';
 
 const MenuList = () => {
 	const router = useRouter();

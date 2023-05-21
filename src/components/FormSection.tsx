@@ -11,6 +11,8 @@ const FormSection = () => {
 
 	return (
 		<Section className={style.formContainer} title='Contacteaza-ne!'>
+			<div className={style.blobTop} />
+			<div className={style.blobBottom} />
 			<Typography variant='h6' textAlign={'center'} maxWidth={'70vw'}>
 				Daca vrei sa afli mai multe trimite-ne un mesaj
 			</Typography>

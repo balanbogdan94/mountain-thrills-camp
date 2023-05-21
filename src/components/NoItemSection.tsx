@@ -11,10 +11,12 @@ const NoItemSection = () => {
 			<div className={styles.imageContainer}>
 				<Image src={'/noItem.svg'} alt='No item image' fill unoptimized />
 			</div>
-			<Typography variant='h2'>Momentan nu există tabere</Typography>
-			<Typography textAlign={'center'}>
-				Contactează-ne și te vom anunța când vor fi disponibile
-			</Typography>
+			<Stack gap={'16px'} alignItems={'center'}>
+				<Typography variant='h2'>Momentan nu există tabere</Typography>
+				<Typography textAlign={'center'}>
+					Contactează-ne și te vom anunța când vor fi disponibile
+				</Typography>
+			</Stack>
 			<Link href='/contact'>
 				<Button variant='contained' color='secondary'>
 					Contactează-ne

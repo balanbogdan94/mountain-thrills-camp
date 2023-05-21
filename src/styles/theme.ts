@@ -69,6 +69,13 @@ const theme = createTheme({
 				},
 			},
 		},
+		MuiButton: {
+			styleOverrides: {
+				root: {
+					minHeight: '44px',
+				},
+			},
+		},
 	},
 });
 export default theme;
