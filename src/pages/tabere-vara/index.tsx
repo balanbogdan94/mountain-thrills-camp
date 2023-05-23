@@ -9,6 +9,7 @@ import Diversity1Icon from '@mui/icons-material/Diversity1';
 import Link from 'next/link';
 import CampTypeIcon from '@/components/CampTypeIcon';
 import CampDateItem from '@/components/CampDateItem';
+import CampItem from '@/components/CampItem';
 
 const MtbCamp = () => {
 	const items = camps && camps.filter((camp) => camp.type === CampType.SUMMER);
@@ -17,40 +18,14 @@ const MtbCamp = () => {
 	return (
 		<Stack alignItems={'center'} gap={'100px'}>
 			<div className={styles.heroContainer}>
-				<CampTypeIcon type={CampType.SUMMER} />
-				<Typography variant='h1'>TABERE DE VARĂ</Typography>
+				<div className={styles.heroImage} />
+				<div className={styles.heroIcon}>
+					<CampTypeIcon type={CampType.SUMMER} />
+				</div>
+				<Typography variant='h2'>TABERE DE VARĂ</Typography>
 			</div>
 			{items.map((item, index) => (
-				<Stack key={item.id} className={styles.itemContainer}>
-					<div
-						className={`${styles.imageContainer} ${
-							index % 2 === 0 ? null : styles.imageSecound
-						}`}>
-						<Image unoptimized fill src={item.imageSrc} alt='' />
-					</div>
-					<Stack gap='16px' className={styles.itemInfoArea}>
-						<Typography className={styles.itemText} variant='h2'>
-							{item.title}
-						</Typography>
-						<Typography variant='subtitle1'>
-							<CampDateItem startDate={item.startDate} endDate={item.endDate} />
-						</Typography>
-						<Typography className={styles.itemText}>
-							{item.description}
-						</Typography>
-						<Typography variant='h5'>Activități:</Typography>
-						<ul>
-							{item.activity.map((a) => (
-								<li key={a}>{a}</li>
-							))}
-						</ul>
-						<Link href={'/contact'}>
-							<Button variant='contained' color='secondary'>
-								Înscrie-te
-							</Button>
-						</Link>
-					</Stack>
-				</Stack>
+				<CampItem key={item.id} item={item} isOdd={index % 2 !== 0} />
 			))}
 			<ContactInfoSection />
 		</Stack>

@@ -13,7 +13,7 @@
   
 }
 .carusel::-webkit-scrollbar-thumb {
-    background-color: #3D3E6B;
+    background-color: none;
     border-radius: 10px;
 }
 

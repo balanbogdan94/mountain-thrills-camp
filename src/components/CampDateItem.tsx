@@ -15,8 +15,8 @@ const CampDateItem = (props: { startDate: Date; endDate: Date }) => {
 		props.startDate,
 	)}.${props.startDate.getFullYear()}`;
 	return (
-		<Stack direction={'row'} gap={'16px'}>
-			<CalendarTodayIcon />
+		<Stack direction={'row'} gap={'12px'} alignItems={'center'}>
+			<CalendarTodayIcon fontSize='small' />
 			<Typography>{text}</Typography>
 		</Stack>
 	);

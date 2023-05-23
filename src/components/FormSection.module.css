@@ -24,7 +24,7 @@
     position: absolute;
     bottom: calc(0px - var(--header-height));
     right: 0;
-    background-image: url('/blob3.svg');
+    background-image: url('/blob31.svg');
     background-size: contain;
     width: clamp(200px,25vw,400px);
     aspect-ratio: 1/1;

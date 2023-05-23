@@ -51,7 +51,7 @@
     flex-direction: column;
     gap: 32px;
     width: 100%;
-    align-content: 'center',
+    align-items: center;
 }
 
 .characteristicsImage {
@@ -78,6 +78,22 @@ position: relative;
   background-repeat: no-repeat;
   z-index: 0;
 }
+.benefitItem {
+  max-width: 200px;
+}
+.benefitImage{
+  width: 200px;
+  aspect-ratio: 1/1;
+  position: relative;
+  border: 5px solid #267C58;
+  border-radius: 50%;
+}
+
+.benefitImage > img {
+  object-fit: contain;
+  border-radius: 50%;
+} 
+
 
 @media screen and (width > 768px) {
   .heroBanner{
@@ -98,6 +114,7 @@ position: relative;
   .benefitsContainer{
   padding: 12px 24px;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   box-shadow: 0px 2px 12px rgba(195, 195, 195, 0.25);
   }

@@ -12,7 +12,7 @@ const AbouUs = () => {
 		<>
 			<div className={styles.heroContainer}>
 				<Diversity1Icon fontSize='large' />
-				<Typography variant='h1'>Despre noi</Typography>
+				<Typography variant='h2'>Despre noi</Typography>
 			</div>
 			<Section title='Despre noi'>
 				<Stack gap={'50px'} maxWidth={'900px'}>

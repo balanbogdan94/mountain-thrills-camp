@@ -1,0 +1,97 @@
+.imageContainer{
+    width: 100%;
+    aspect-ratio: 1/1;
+    position: relative;
+}
+
+.imageContainer > img {
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.price {
+    position: absolute;
+    top: calc(-125px / 2);
+    right: calc(-125px / 4);
+    background: #267C58;
+    border-radius: 50%;
+    width: 125px;
+    padding: 10px;
+    aspect-ratio: 1/1;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    justify-content: center;
+}
+
+.itemContainer {
+    flex-direction: column;
+    box-shadow: 0px 2px 13px rgba(64, 64, 64, 0.25);
+    border-radius: 8px;
+    max-width: 90vw;
+    padding: 24px 12px;
+    gap: 32px;
+}
+
+.itemInfoArea {
+    align-items: center;
+}
+
+.itemText {
+    text-align: center;
+}
+.itemInfoArea > ul {
+    padding-left: 10px;
+}
+
+@media screen and (width > 768px) {
+    .itemContainer {
+        flex-direction: row;
+        padding: 0;
+    }
+    .imageContainer{
+        position: relative;
+        min-width: 400px;
+        max-width: 500px;
+    }
+
+    .imageSecound{
+        order:10
+    }
+
+    
+    .imageContainer > img {
+        border-radius: 8px 0px 0px 8px;
+    }
+    
+    .imageSecound > img {
+        border-radius: 0px 8px 8px 0px;
+    }
+
+    .imageSecound .price {
+        left: unset;
+        right: calc(-125px / 4);
+    }
+
+
+    .price  {
+        right: unset;
+        left: calc(-125px / 4);
+    }
+
+    .itemInfoArea {
+        align-items: flex-start;
+        padding: 24px;
+    }
+
+    .itemInfoArea > :last-child {
+        display: flex;
+        align-items: flex-end;
+        height: 100%;
+
+    }
+    
+    .itemText {
+        text-align: left;
+    }
+}

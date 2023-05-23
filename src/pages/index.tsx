@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { Inter } from 'next/font/google';
 import styles from '@/styles/Home.module.css';
-import { Button, List, ListItem, Stack, Typography } from '@mui/material';
+import { Button, List, Stack, Typography } from '@mui/material';
 import CampTipeItem from '../components/CampTipeItem';
 import { Section } from '../components/layout/Section';
 import FormSection from '../components/FormSection';
@@ -12,8 +12,19 @@ import { TeamSection } from '@/components/TeamSection';
 import { Routes } from '@/models/Routes';
 import CampsCarousel from '@/components/CampsCarousel';
 
-const inter = Inter({ subsets: ['latin'] });
-
+const benefits = [
+	{ text: 'Tabere de vara', imageSrc: './benefits/tabereVara.png' },
+	{
+		text: 'Tabere de comunicare (parintii si copii)',
+		imageSrc: './benefits/tabereComunicare.png',
+	},
+	{
+		text: 'Excursii cu bicicleta',
+		imageSrc: './benefits/excursiiBicicleta.png',
+	},
+	{ text: 'Initieri MTB', imageSrc: './benefits/initieriMTB.png' },
+	{ text: 'Tabere de SKI', imageSrc: './benefits/tabereSki.png' },
+];
 export default function Home() {
 	return (
 		<>
@@ -46,31 +57,42 @@ export default function Home() {
 						</div>
 					</Stack>
 					<List className={styles.benefitsContainer}>
-						<BenefitItem icon={'/benefits/Rezultate.svg'} title={'Rezultate'} />
-						<BenefitItem
-							icon={'/benefits/Profesionalism.svg'}
-							title={'Profesionalism'}
-						/>
-						<BenefitItem
-							icon={'/benefits/Seriozitate.svg'}
-							title={'Seriozitate'}
-						/>
-						<BenefitItem icon={'/benefits/Munca.svg'} title={'Muncă'} />
+						{benefits.map((benefit, index) => (
+							<Stack
+								key={index}
+								className={styles.benefitItem}
+								direction={'column'}
+								alignItems={'center'}
+								gap='18px'>
+								<div className={styles.benefitImage}>
+									<Image
+										src={benefit.imageSrc}
+										alt={benefit.text}
+										fill
+										unoptimized
+									/>
+								</div>
+								<Typography
+									fontWeight={900}
+									textAlign={'center'}
+									variant='body1'>
+									{benefit.text}
+								</Typography>
+							</Stack>
+						))}
 					</List>
 				</section>
 				<Section title={'Despre noi'}>
 					<iframe
-						width='90%'
+						width='70%'
 						style={{
 							aspectRatio: '16/9',
 							borderRadius: '10px',
 							marginBottom: '35px',
 						}}
-						src='https://www.youtube.com/embed/RzVvThhjAKw?controls=0'
-						title='YouTube video player'
-						allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-						allowFullScreen
-					/>
+						src='https://www.youtube-nocookie.com/embed/9SRFL8wrrzA?controls=0'
+						title='Zero Point'
+						allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'></iframe>
 				</Section>
 
 				<Section title='Tipuri de tabere'>

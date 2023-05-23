@@ -33,14 +33,12 @@ const CampsCarousel = () => {
 						<Image src={item.imageSrc} fill alt='' unoptimized />
 						<Stack className={styles.textContent} gap={'15px'}>
 							<CampTypeIcon type={item.type} />
-							<Stack gap={'8px'}>
+							<Stack gap={'8px'} alignItems={'center'}>
 								<Typography variant='h2'>{item.title}</Typography>
-								<Typography variant='body1'>
-									<CampDateItem
-										startDate={item.startDate}
-										endDate={item.endDate}
-									/>
-								</Typography>
+								<CampDateItem
+									startDate={item.startDate}
+									endDate={item.endDate}
+								/>
 							</Stack>
 						</Stack>
 					</div>
