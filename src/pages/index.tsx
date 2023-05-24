@@ -39,9 +39,9 @@ export default function Home() {
 				<section className={styles.hero}>
 					<Stack className={styles.heroBanner}>
 						<Stack className={styles.heroContent} alignItems={'center'}>
-							<Typography textAlign={'center'} variant='h1'>
-								HAI CU NOI ÎN TABĂRĂ
-							</Typography>
+							<div className={styles.title}>
+								<Image unoptimized src={'/title.svg'} alt='logo' fill />
+							</div>
 							<Typography variant='subtitle2' textAlign={'center'}>
 								Tabere de schi, Scoăla de schi, E-bike, Schi de tură, Tabere de
 								vară la munte!
@@ -53,7 +53,7 @@ export default function Home() {
 							</Link>
 						</Stack>
 						<div className={styles.heroImage}>
-							<Image unoptimized src={'/hero.webp'} alt='hero' fill />
+							<Image unoptimized src={'/hero.png'} alt='hero' fill />
 						</div>
 					</Stack>
 					<List className={styles.benefitsContainer}>
@@ -84,15 +84,11 @@ export default function Home() {
 				</section>
 				<Section title={'Despre noi'}>
 					<iframe
-						width='70%'
-						style={{
-							aspectRatio: '16/9',
-							borderRadius: '10px',
-							marginBottom: '35px',
-						}}
-						src='https://www.youtube-nocookie.com/embed/9SRFL8wrrzA?controls=0'
+						src='https://www.youtube.com/embed/9SRFL8wrrzA'
+						className={styles.video}
 						title='Zero Point'
-						allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'></iframe>
+						allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+						allowFullScreen></iframe>
 				</Section>
 
 				<Section title='Tipuri de tabere'>
@@ -123,45 +119,32 @@ export default function Home() {
 						/>
 					</List>
 				</Section>
-				<div className={styles.characteristicsContainer}>
-					<Section
-						title='Obiectivele noastre'
-						className={styles.contrastSection}>
-						<Stack gap={'30px'} alignItems={'center'}>
-							<div className={styles.characteristicsImage}>
-								<Image
-									src={'/objectives/group.webp'}
-									alt='group of people'
-									fill
-									style={{ objectFit: 'cover' }}
-									unoptimized
-								/>
-							</div>
-							<Stack className={styles.benefitsTextContent}>
-								<BenefitItem
-									icon={'/objectives/ExercitiuFizic.svg'}
-									title='Exercițiu fizic'
-									description='Promovarea exercițiului fizic, în aer liber, baza fiind schi-ul și biking-ul, desfășurat în deplină siguranță'
-								/>
-								<BenefitItem
-									icon={'/objectives/Educare.svg'}
-									title='Educare'
-									description='Educare prin sport și exercițiu fizic organizat, adoptarea unui stil de viață sănătos, precum și conectarea cu natura'
-								/>
-								<BenefitItem
-									icon={'/objectives/ActivitatiRecreative.svg'}
-									title='Activități recreative'
-									description='Organizarea de activități recreative atât pentru copii cât și pentru familii'
-								/>
-								<BenefitItem
-									icon={'/objectives/Dezvoltare.svg'}
-									title='Dezvoltare'
-									description='Motivarea pentru dezvoltarea capacităților fizice, a spiritului de echipă, a fair-play-ului și a competivități '
-								/>
-							</Stack>
+				<Section title='Obiectivele noastre' className={styles.contrastSection}>
+					<Stack gap={'30px'} alignItems={'center'} width={'100%'}>
+						<Stack className={styles.benefitsTextContent}>
+							<BenefitItem
+								icon={'/objectives/ExercitiuFizic.svg'}
+								title='Exercițiu fizic'
+								description='Promovarea exercițiului fizic, în aer liber, baza fiind schi-ul și biking-ul, desfășurat în deplină siguranță'
+							/>
+							<BenefitItem
+								icon={'/objectives/Educare.svg'}
+								title='Educare'
+								description='Educare prin sport și exercițiu fizic organizat, adoptarea unui stil de viață sănătos, precum și conectarea cu natura'
+							/>
+							<BenefitItem
+								icon={'/objectives/ActivitatiRecreative.svg'}
+								title='Activități recreative'
+								description='Organizarea de activități recreative atât pentru copii cât și pentru familii'
+							/>
+							<BenefitItem
+								icon={'/objectives/Dezvoltare.svg'}
+								title='Dezvoltare'
+								description='Motivarea pentru dezvoltarea capacităților fizice, a spiritului de echipă, a fair-play-ului și a competivități '
+							/>
 						</Stack>
-					</Section>
-				</div>
+					</Stack>
+				</Section>
 				<TeamSection variant='Simple' />
 				<Section title='Următoarele tabere'>
 					<CampsCarousel />
