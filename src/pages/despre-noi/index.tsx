@@ -6,10 +6,14 @@ import React from 'react';
 import styles from './Home.module.css';
 import Diversity1Icon from '@mui/icons-material/Diversity1';
 import ContactInfoSection from '@/components/ContactInfoSection';
+import Head from 'next/head';
 
 const AbouUs = () => {
 	return (
 		<>
+			<Head>
+				<title>Zero Point</title>
+			</Head>
 			<div className={styles.heroContainer}>
 				<Diversity1Icon fontSize='large' />
 				<Typography variant='h2'>Despre noi</Typography>

@@ -32,7 +32,7 @@ export default function Home() {
 				<title>Zero Point</title>
 				<meta name='description' content='Home page of Zero Point' />
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
-				<link rel='icon' href='/favicon.ico' />
+				<link rel='icon' href='/logo.ico' />
 			</Head>
 			<div className={styles.main}>
 				<div className={styles.Splah} />
@@ -43,8 +43,7 @@ export default function Home() {
 								<Image unoptimized src={'/title.svg'} alt='logo' fill />
 							</div>
 							<Typography variant='subtitle2' textAlign={'center'}>
-								Tabere de schi, Scoăla de schi, E-bike, Schi de tură, Tabere de
-								vară la munte!
+								Scoală de ski, MTB, Ski, Tabere de vară la munte!
 							</Typography>
 							<Link href={Routes.get('Contact') ?? ''}>
 								<Button variant='contained' color='secondary'>
@@ -149,7 +148,9 @@ export default function Home() {
 				<Section title='Următoarele tabere'>
 					<CampsCarousel />
 				</Section>
-				<FormSection />
+				<div className={styles.formSection}>
+					<FormSection />
+				</div>
 			</div>
 		</>
 	);

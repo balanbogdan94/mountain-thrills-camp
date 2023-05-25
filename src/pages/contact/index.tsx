@@ -1,13 +1,19 @@
 import React from 'react';
 import FormSection from '../../components/FormSection';
 import ContactInfoSection from '@/components/ContactInfoSection';
+import Head from 'next/head';
 
 const Contact = () => {
 	return (
-		<div>
-			<FormSection />
-			<ContactInfoSection />
-		</div>
+		<>
+			<Head>
+				<title>Zero Point</title>
+			</Head>
+			<div>
+				<FormSection />
+				<ContactInfoSection />
+			</div>
+		</>
 	);
 };
 

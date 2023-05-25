@@ -11,7 +11,6 @@ const FormSection = () => {
 
 	return (
 		<Section title='Contactează-ne!'>
-			<div className={style.formContainer}></div>
 			<div className={style.blobTop} />
 			<div className={style.blobBottom} />
 			<Typography
