@@ -1,8 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import { Inter } from 'next/font/google';
-import styles from '@/styles/Home.module.css';
-import { Button, List, Stack, Typography } from '@mui/material';
+import styles from '@/styles/pages/Home.module.css';
+import { Button, List, Stack, Typography, useTheme } from '@mui/material';
 import CampTipeItem from '../components/CampTipeItem';
 import { Section } from '../components/layout/Section';
 import FormSection from '../components/FormSection';
@@ -11,21 +10,11 @@ import { BenefitItem } from '@/components/BenefitItem';
 import { TeamSection } from '@/components/TeamSection';
 import { Routes } from '@/models/Routes';
 import CampsCarousel from '@/components/CampsCarousel';
+import { heroCampTypes } from '@/models/Camps';
+import HeroCampTypeItem from '@/components/HeroCampTypeItem';
 
-const benefits = [
-	{ text: 'Tabere de vara', imageSrc: './benefits/tabereVara.png' },
-	{
-		text: 'Tabere de comunicare (parintii si copii)',
-		imageSrc: './benefits/tabereComunicare.png',
-	},
-	{
-		text: 'Excursii cu bicicleta',
-		imageSrc: './benefits/excursiiBicicleta.png',
-	},
-	{ text: 'Initieri MTB', imageSrc: './benefits/initieriMTB.png' },
-	{ text: 'Tabere de SKI', imageSrc: './benefits/tabereSki.png' },
-];
 export default function Home() {
+	const theme = useTheme();
 	return (
 		<>
 			<Head>
@@ -33,6 +22,7 @@ export default function Home() {
 				<meta name='description' content='Home page of Zero Point' />
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
 				<link rel='icon' href='/logo.ico' />
+				<meta Permissions-Policy='interest-cohort=()' />
 			</Head>
 			<div className={styles.main}>
 				<div className={styles.Splah} />
@@ -40,9 +30,15 @@ export default function Home() {
 					<Stack className={styles.heroBanner}>
 						<Stack className={styles.heroContent} alignItems={'center'}>
 							<div className={styles.title}>
-								<Image unoptimized src={'/title.svg'} alt='logo' fill />
+								<Image
+									unoptimized
+									src={'/title.svg'}
+									alt='logo'
+									fill
+									priority
+								/>
 							</div>
-							<Typography variant='subtitle2' textAlign={'center'}>
+							<Typography variant='subtitle2'>
 								Scoală de ski, MTB, Ski, Tabere de vară la munte!
 							</Typography>
 							<Link href={Routes.get('Contact') ?? ''}>
@@ -55,29 +51,9 @@ export default function Home() {
 							<Image unoptimized src={'/hero.png'} alt='hero' fill />
 						</div>
 					</Stack>
-					<List className={styles.benefitsContainer}>
-						{benefits.map((benefit, index) => (
-							<Stack
-								key={index}
-								className={styles.benefitItem}
-								direction={'column'}
-								alignItems={'center'}
-								gap='18px'>
-								<div className={styles.benefitImage}>
-									<Image
-										src={benefit.imageSrc}
-										alt={benefit.text}
-										fill
-										unoptimized
-									/>
-								</div>
-								<Typography
-									fontWeight={900}
-									textAlign={'center'}
-									variant='body1'>
-									{benefit.text}
-								</Typography>
-							</Stack>
+					<List className={styles.heroCampTypeList}>
+						{heroCampTypes.map((campType, index) => (
+							<HeroCampTypeItem key={index} campType={campType} />
 						))}
 					</List>
 				</section>
@@ -86,7 +62,6 @@ export default function Home() {
 						src='https://www.youtube.com/embed/9SRFL8wrrzA'
 						className={styles.video}
 						title='Zero Point'
-						allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
 						allowFullScreen></iframe>
 				</Section>
 

@@ -36,7 +36,6 @@ export default function App({
 				<ThemeProvider theme={theme}>
 					<CssBaseline />
 					<MountainThrillsCampLayout>
-						{/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
 						<Component {...pageProps} />
 					</MountainThrillsCampLayout>
 				</ThemeProvider>

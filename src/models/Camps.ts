@@ -31,7 +31,7 @@ export const camps: CampItemType[] = [
 		price: 2100,
 	},
 	{
-		id: '90bf49ae-29ba-4bae-ab61-49f5a34d5b8a',
+		id: '9fbff486-83fa-424d-9619-ec29715636ed',
 		title: 'MTB Viscri',
 		description:
 			'Satul Viscri este un pitoresc și fermecător sat tradițional din Transilvania, situat în județul Brașov, România. Cunoscut pentru peisajele sale rurale idilice și pentru patrimoniul său cultural, Viscri a fost inclus în lista Patrimoniului Mondial UNESCO, fiind recunoscut ca unul dintre cele mai bine conservate sate săsești din regiune. O plimbare prin satul Viscri te va purta prin peisaje rurale pitorești, cu dealuri verzi acoperite de pășuni și păduri de fag. Vizitarea acestui sat reprezintă o călătorie în timp și o oportunitate de a te conecta cu istoria și cultura unei comunități săsești unice.',
@@ -48,7 +48,7 @@ export const camps: CampItemType[] = [
 		price: 1900,
 	},
 	{
-		id: '90bf49ae-29ba-4bae-ab61-49f5a34d5b8a',
+		id: '87c6a349-9f84-44e1-8354-6ee994f326c2',
 		title: 'MTB Casa Cânda (Sălașul de Sus) - Ecoturism',
 		description:
 			'Aflat la poalele Munților Poiana Ruscă, Sălașul de Sus este înconjurat de păduri dese, văi adânci și pâraie cristaline. Aici vei găsi o natură nealterată și o liniște reconfortantă. Peisajul montan oferă oportunități excelente pentru drumeții și explorarea naturii.Datorită frumuseții naturale și a tradițiilor autentice, Sălașul de Sus este o destinație populară pentru iubitorii de ecoturism și turism rural. Poți experimenta stilul de viață tradițional, participând la activități meșteșugărești, cum ar fi prelucrarea lemnului sau țesutul.',
@@ -61,7 +61,7 @@ export const camps: CampItemType[] = [
 		price: 2100,
 	},
 	{
-		id: '90bf49ae-29ba-4bae-ab61-49f5a34d5b8a',
+		id: '148fdd56-5dd9-4d83-9166-2cbd8ebe1879',
 		title: 'Drumeție Cioclovina ( Tărâmuri Dacice )',
 		description:
 			'Parcul Natural Grădiștea Muncelului – Cioclovina cuprinde, între limitele sale, șase dintre cele mai spectaculoase rezervații naturale ale județului Hunedoara: Complexul carstic Ponorici-Cioclovina, Peștera Tecuri, Peștera Șura Mare, Cheile Crivadiei, Platoul Vârtoape, Locul fosilifer Ohaba-Ponor, Peștera Bolii. Totodată, aici se află siturile arheologice aflate în Patrimoniul UNESCO de la Sarmizegetusa Regia, Costești, Blidaru, Luncani-Piatra Roșie și așezările etnografice autentice din Platforma Luncanilor',
@@ -79,7 +79,7 @@ export const camps: CampItemType[] = [
 			'https://zeropointstorage.blob.core.windows.net/images/WhatsApp%20Image%202023-03-29%20at%2019.19.27.webp',
 	},
 	{
-		id: '90bf49ae-29ba-4bae-ab61-49f5a34d5b8a',
+		id: 'd0a513b9-a1ca-407a-8bb6-5ca6f628d8a7',
 		title: 'Drumeție Apuseni',
 		description:
 			'Munții Apuseni este o destinație tradițională. Ne vom aventura pe trasee montane în care vom descoperi: pietrele Boghii, Cheile Somesului Cald, Molhasurile de la Izbuce Focul Viu, Lumea Pierdută,…etc, locuri numai bune pentru a înțelege releieful carstic alcătuit din peșteri, chei și defilee. Varietatea oferită de Apuseni îl face unic la noi în România datorită formelor sculptate de apă în rocile solubile . Pe lângă lecțiile de geneză și geologie predate de peisajul înconjurător, cei mici se vor bucura de aerul curat și pădurile Apusenilor.',
@@ -96,7 +96,7 @@ export const camps: CampItemType[] = [
 			'https://zeropointstorage.blob.core.windows.net/images/Tabere-copii-2022-munte.webp',
 	},
 	{
-		id: '90bf49ae-29ba-4bae-ab61-49f5a34d5b8a',
+		id: '99f54ff0-64d3-4a07-86ad-c5344737e090',
 		title: 'Drumeție Retezat',
 		description:
 			'Bijuteria Carpaților românești, masivul presărat cu 80 de oaze albastre în care se oglindește cerul. Dincolo de frumusețea sa sălbatică și unică și de liniștea absolută pe care ți-o oferă, masivul adăpostește o lume aparținând sprintenelor capre negre și miilor de plante care colorează culmile. În orice punct te conduc potecile, vei descoperi că în Retezat totul freamătă de viaț; natura pură a creat aici peisaje de excepție pentru care merită din plin să străbați cărările muntelui.',
@@ -125,4 +125,35 @@ export const camps: CampItemType[] = [
 		imageSrc:
 			'https://zeropointstorage.blob.core.windows.net/images/Mask%20group.png',
 	},
+	{
+		id: '9fa464ef-8082-4d80-b561-a7b5b49decef',
+		title: 'Tabara comunicare Apuseni',
+		price: 2100,
+		description:
+			'Tabăra de comunicare dintre părinți și copii este un mediu în care se promovează și se dezvoltă comunicarea sănătoasă și deschisă între cele două generații. Scopul acestei tabere este de a spori înțelegerea reciprocă, de a îmbunătăți relațiile familiale și de a facilita dialogul între părinți și copii.',
+		type: CampType.SKY,
+		startDate: new Date('08/21/2022'),
+		endDate: new Date('08/27/2022'),
+		activity: [
+			'Sesiuni de grup',
+			'Jocuri de rol',
+			'Dezbateri și ateliere interactive',
+		],
+		imageSrc:
+			'https://zeropointstorage.blob.core.windows.net/images/Mask%20group.png',
+	},
+];
+
+export const heroCampTypes = [
+	{ text: 'Tabere de vara', imageSrc: './benefits/tabereVara.png' },
+	{
+		text: 'Tabere de comunicare (parintii si copii)',
+		imageSrc: './benefits/tabereComunicare.png',
+	},
+	{
+		text: 'Excursii cu bicicleta',
+		imageSrc: './benefits/excursiiBicicleta.png',
+	},
+	{ text: 'Initieri MTB', imageSrc: './benefits/initieriMTB.png' },
+	{ text: 'Tabere de SKI', imageSrc: './benefits/tabereSki.png' },
 ];

@@ -9,6 +9,7 @@ const breakpoints = {
 		xl: 1920,
 	},
 };
+
 const theme = createTheme({
 	breakpoints,
 	palette: {

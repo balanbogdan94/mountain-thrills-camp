@@ -8,13 +8,14 @@ import CampDateItem from './CampDateItem';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
 const CampsCarousel = () => {
+	//Show only items with endDate in future in asc order
 	const items =
 		camps &&
 		camps
-			.filter((i) => i.endDate > new Date())
-			.sort(
-				(camp1, camp2) => camp1.startDate.getDate() - camp2.startDate.getDate(),
-			);
+			.filter((i) => new Date().valueOf() < i.endDate.valueOf())
+			.sort((camp1, camp2) => {
+				return camp1.startDate.valueOf() - camp2.startDate.valueOf();
+			});
 	const scrollBar = React.useRef<HTMLDivElement>(null);
 	const onButtonCLick = (direction: 'RIGHT' | 'LEFT') => () => {
 		const scrollOffset = 200;

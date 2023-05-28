@@ -17,6 +17,16 @@
   padding-top: var(--padding-top-mobile);
 }
 
+.heroImage{ 
+  width: 100%;
+  aspect-ratio: 4/3;
+  position: relative; 
+}
+
+.heroImage > img {
+   object-fit: 'contain'
+}
+
 .heroContent {
   gap: 14px;
   justify-content: center;
@@ -24,6 +34,15 @@
   max-width: 40ch;
   z-index: 1;
 }
+
+.heroCampTypeList {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+  align-items: center;
+}
+
 
 .title {
   position: relative;
@@ -38,19 +57,11 @@
   margin-bottom: 35px;
 }
 
-.heroImage{ 
-  width: 100%;
-  aspect-ratio: 4/3;
-  position: relative; 
-}
 
-.heroImage > img {
-   object-fit: 'contain'
-}
 
 .contrastSection {
-  background-color: #267C58;
-  color: #ffffff;
+  background-color: var(--color-background-secondary);
+  color: var(--color-foreground-secondary);
 }
 
 .campTypeContainer {
@@ -59,19 +70,6 @@
   gap: 25px;
 }
 
-.benefitsContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    width: 100%;
-    align-items: center;
-}
-
-.characteristicsImage {
-width: 100vw;
-aspect-ratio: 1/1;
-position: relative;
-}
 
 .benefitsTextContent {
   display: flex;
@@ -95,21 +93,7 @@ position: relative;
   background-repeat: no-repeat;
   z-index: 0;
 }
-.benefitItem {
-  max-width: 200px;
-}
-.benefitImage{
-  width: 200px;
-  aspect-ratio: 1/1;
-  position: relative;
-  border: 5px solid #267C58;
-  border-radius: 50%;
-}
 
-.benefitImage > img {
-  object-fit: contain;
-  border-radius: 50%;
-} 
 
 
 @media screen and (width > 768px) {
@@ -128,14 +112,7 @@ position: relative;
     text-align: left;
   }
 
-  .benefitsContainer{
-  padding: 12px 24px;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: flex-start;
-  box-shadow: 0px 2px 12px rgba(195, 195, 195, 0.25);
-  }
+
 
   .heroImage{
     width: 50%;
@@ -149,6 +126,15 @@ position: relative;
     object-fit: contain;
     object-position: right;
  }
+
+ .heroCampTypeList{
+  padding: 12px 24px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  box-shadow: 0px 2px 12px rgba(195, 195, 195, 0.25);
+}
 
  .campTypeContainer{
   flex-direction: row;
