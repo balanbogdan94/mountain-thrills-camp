@@ -125,23 +125,6 @@ export const camps: CampItemType[] = [
 		imageSrc:
 			'https://zeropointstorage.blob.core.windows.net/images/Mask%20group.png',
 	},
-	{
-		id: '9fa464ef-8082-4d80-b561-a7b5b49decef',
-		title: 'Tabara comunicare Apuseni',
-		price: 2100,
-		description:
-			'Tabăra de comunicare dintre părinți și copii este un mediu în care se promovează și se dezvoltă comunicarea sănătoasă și deschisă între cele două generații. Scopul acestei tabere este de a spori înțelegerea reciprocă, de a îmbunătăți relațiile familiale și de a facilita dialogul între părinți și copii.',
-		type: CampType.SKY,
-		startDate: new Date('08/21/2022'),
-		endDate: new Date('08/27/2022'),
-		activity: [
-			'Sesiuni de grup',
-			'Jocuri de rol',
-			'Dezbateri și ateliere interactive',
-		],
-		imageSrc:
-			'https://zeropointstorage.blob.core.windows.net/images/Mask%20group.png',
-	},
 ];
 
 export const heroCampTypes = [
