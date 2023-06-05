@@ -28,6 +28,15 @@ const MtbCamp = () => {
 				{items.map((item, index) => (
 					<CampItem key={item.id} item={item} isOdd={index % 2 !== 0} />
 				))}
+				<iframe
+					src='https://www.google.com/maps/d/embed?mid=168IKp_d3eps3KDQ7NYoICNwmwspZwLQ&ehbc=2E312F&ll=45.57557761065109%2C23.162473994005385&z=12'
+					allowFullScreen
+					style={{
+						borderRadius: '20px',
+						width: 'min(90%, 800px)',
+						aspectRatio: '1/1',
+					}}
+				/>
 				<ContactInfoSection />
 			</Stack>
 		</>
