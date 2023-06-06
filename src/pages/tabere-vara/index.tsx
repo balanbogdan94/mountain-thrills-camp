@@ -29,13 +29,9 @@ const MtbCamp = () => {
 					<CampItem key={item.id} item={item} isOdd={index % 2 !== 0} />
 				))}
 				<iframe
-					src='https://www.google.com/maps/d/embed?mid=168IKp_d3eps3KDQ7NYoICNwmwspZwLQ&ehbc=2E312F&ll=45.57557761065109%2C23.162473994005385&z=12'
+					src='https://www.google.com/maps/d/embed?mid=1vDY3KBAcL9541WNH9Nzt3QnM8TSCaqM&ehbc=2E312F"&ll=46.01023614849672%2C23.030814303820488&z=7'
 					allowFullScreen
-					style={{
-						borderRadius: '20px',
-						width: 'min(90%, 800px)',
-						aspectRatio: '1/1',
-					}}
+					className={styles.embadedMap}
 				/>
 				<ContactInfoSection />
 			</Stack>

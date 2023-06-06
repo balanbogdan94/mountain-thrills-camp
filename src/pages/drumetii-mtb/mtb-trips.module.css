@@ -37,3 +37,15 @@
     display: flex;
     align-items: center;
 }
+
+.embadedMap {
+    border-radius: var(--border-radius);
+    width: 90vw;
+    aspect-ratio: 1/1;
+}
+
+@media screen and (width > 768px) {
+    .embadedMap{
+        aspect-ratio: 16/9;
+    }
+}
