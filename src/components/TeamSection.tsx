@@ -67,8 +67,8 @@ export const TeamSection = (props: { variant: 'Simple' | 'Full' }) => (
 				name={props.variant === 'Simple' ? 'Gabi' : 'Gabriel Myklos'}
 				description={
 					props.variant === 'Simple'
-						? 'Cu o experiență montană deosebită,un alpinist și schior de performanță,un împătimit al MTB-ului'
-						: 'Cu o experiență montană deosebită,un alpinist și schior de performanță,un împătimit al MTB-ului ,Gabi este pentru copiii din tabere o sursă inepuizabilă de cunoștiințe,povești și energie pozitivă'
+						? 'Cu o experiență montană deosebită,un alpinist și schior de excepție,un împătimit al MTB-ului'
+						: 'Cu o experiență montană deosebită,un alpinist și schior de excepție,un împătimit al MTB-ului ,Gabi este pentru copiii din tabere o sursă inepuizabilă de cunoștiințe,povești și energie pozitivă'
 				}
 				variant={props.variant}
 				items={
@@ -92,16 +92,16 @@ export const TeamSection = (props: { variant: 'Simple' | 'Full' }) => (
 				variant={props.variant}
 				items={
 					<ul className={styles.teamMemberItems}>
-						<li>Facultatea de Inginerie</li>
-						<li>Facultatea de Sociologie-Psihologie</li>
-						<li>Coordonator tabere vară-iarnă</li>
-						<li>Experientă de peste 10 ani</li>
+						<li>Ghid turist national</li>
+						<li>
+							Monitor Ski (International Schi Instructor Association-ISIA)
+						</li>
 					</ul>
 				}
 			/>
 			<TeamItem
 				imageSrc={'/team/6.png'}
-				name={props.variant === 'Simple' ? 'Marian' : 'Marian Florin'}
+				name={props.variant === 'Simple' ? 'Florin' : 'Marian Florin'}
 				description={
 					props.variant === 'Simple'
 						? 'Crede în educația experiențială și este recunoscut ca unul dintre cel mai creativ,empatic și cu simțul umorului'
@@ -110,10 +110,10 @@ export const TeamSection = (props: { variant: 'Simple' | 'Full' }) => (
 				variant={props.variant}
 				items={
 					<ul className={styles.teamMemberItems}>
-						<li>Ghid turist național</li>
-						<li>
-							Monitor schi (Internațional Schi Instructor Associations-ISIA)
-						</li>
+						<li>Facultatea de Sociologie-Pishologie</li>
+						<li>Psiholog</li>
+						<li>Coordonator tabere vara-iarna</li>
+						<li>Experienta de peste 10 ani</li>
 					</ul>
 				}
 			/>
