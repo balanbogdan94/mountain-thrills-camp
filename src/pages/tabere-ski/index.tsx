@@ -11,34 +11,39 @@ import CampTypeIcon from '@/components/CampTypeIcon';
 const SkiCamp = () => {
 	const items = camps && camps.filter((camp) => camp.type === CampType.SKY);
 
-	if (items.length === 0) return <NoItemSection />;
 	return (
 		<>
 			<Head>
 				<title>Zero Point</title>
+				<meta name='description' content='Home page of Zero Point' />
+				<link rel='icon' href='/logo.ico' />
 			</Head>
-			<Stack alignItems={'center'} gap={'100px'}>
-				<div className={styles.heroContainer}>
-					<div className={styles.heroImage} />
-					<div className={styles.heroIcon}>
-						<CampTypeIcon type={CampType.SKY} />
+			{items.length === 0 ? (
+				<NoItemSection />
+			) : (
+				<Stack alignItems={'center'} gap={'100px'}>
+					<div className={styles.heroContainer}>
+						<div className={styles.heroImage} />
+						<div className={styles.heroIcon}>
+							<CampTypeIcon type={CampType.SKY} />
+						</div>
+						<Typography variant='h2'>Tabere SKI</Typography>
 					</div>
-					<Typography variant='h2'>Tabere SKI</Typography>
-				</div>
-				{items.map((item, index) => (
-					<CampItem key={item.id} item={item} isOdd={index % 2 !== 0} />
-				))}
-				<iframe
-					src='https://www.google.com/maps/d/embed?mid=168IKp_d3eps3KDQ7NYoICNwmwspZwLQ&ehbc=2E312F&ll=45.57557761065109%2C23.162473994005385&z=12'
-					allowFullScreen
-					style={{
-						borderRadius: '20px',
-						width: 'min(90%, 800px)',
-						aspectRatio: '1/1',
-					}}
-				/>
-				<ContactInfoSection />
-			</Stack>
+					{items.map((item, index) => (
+						<CampItem key={item.id} item={item} isOdd={index % 2 !== 0} />
+					))}
+					<iframe
+						src='https://www.google.com/maps/d/embed?mid=168IKp_d3eps3KDQ7NYoICNwmwspZwLQ&ehbc=2E312F&ll=45.57557761065109%2C23.162473994005385&z=12'
+						allowFullScreen
+						style={{
+							borderRadius: '20px',
+							width: 'min(90%, 800px)',
+							aspectRatio: '1/1',
+						}}
+					/>
+					<ContactInfoSection />
+				</Stack>
+			)}
 		</>
 	);
 };

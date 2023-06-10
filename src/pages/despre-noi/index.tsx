@@ -13,6 +13,8 @@ const AbouUs = () => {
 		<>
 			<Head>
 				<title>Zero Point</title>
+				<meta name='description' content='Home page of Zero Point' />
+				<link rel='icon' href='/logo.ico' />
 			</Head>
 			<div className={styles.heroContainer}>
 				<Diversity1Icon fontSize='large' />

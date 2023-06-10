@@ -46,6 +46,25 @@
 
 @media screen and (width > 768px) {
     .embadedMap{
-        aspect-ratio: 16/9;
+        aspect-ratio: 16/6;
     }
+
+    .overlayMap {
+        pointer-events: none;
+        filter: brightness(50%);
+    }
+
+    .overlay {
+        position: relative;
+        cursor: pointer;
+     }
+
+     .overlay::after{
+        position: absolute;
+        content: "Click me to move the map";
+        bottom: 50%;
+        left: 40%;
+        color: white;
+        font-size: 2rem;
+     }
 }
