@@ -12,8 +12,8 @@ const CampDateItem = (props: { startDate: Date; endDate: Date }) => {
 	const text = `${getDay2Digits(props.startDate)}.${getMonth2Digits(
 		props.startDate,
 	)} - ${getDay2Digits(props.endDate)}.${getMonth2Digits(
-		props.startDate,
-	)}.${props.startDate.getFullYear()}`;
+		props.endDate,
+	)}.${props.endDate.getFullYear()}`;
 	return (
 		<Stack direction={'row'} gap={'12px'} alignItems={'center'}>
 			<CalendarTodayIcon fontSize='small' />
