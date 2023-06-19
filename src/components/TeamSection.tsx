@@ -19,7 +19,7 @@ export const TeamSection = (props: { variant: 'Simple' | 'Full' }) => (
 					<ul className={styles.teamMemberItems}>
 						<li>
 							Peste 10 de ani de experiență ca monitor de schi, acreditat
-							internațional, ISIA
+							internațional
 						</li>
 						<li>Instructor coordonator de tabere vară/ iarnă</li>
 					</ul>
