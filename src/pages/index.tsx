@@ -22,7 +22,6 @@ export default function Home() {
 				<meta name='description' content='Home page of Zero Point' />
 				<meta name='viewport' content='width=device-width, initial-scale=1' />
 				<link rel='icon' href='/logo.ico' />
-				<meta Permissions-Policy='interest-cohort=()' />
 			</Head>
 			<div className={styles.main}>
 				<div className={styles.Splah} />

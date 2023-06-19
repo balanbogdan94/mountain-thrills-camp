@@ -30,12 +30,24 @@ const MtbCamp = () => {
 				<link rel='icon' href='/logo.ico' />
 			</Head>
 			<Stack alignItems={'center'} gap={'100px'}>
-				<div className={styles.heroContainer}>
-					<div className={styles.heroImage} />
-					<div className={styles.heroIcon}>
-						<CampTypeIcon type={CampType.SUMMER} />
+				<div style={{ width: '100%' }}>
+					<div className={styles.heroContainer}>
+						<div className={styles.heroImage} />
+						<div className={styles.heroIcon}>
+							<CampTypeIcon type={CampType.SUMMER} />
+						</div>
+						<Typography variant='h2'>TABERE DE VARĂ</Typography>
 					</div>
-					<Typography variant='h2'>TABERE DE VARĂ</Typography>
+					<div className={styles.announce}>
+						<Typography variant='body1'>
+							Traseu in fiecare joi cu plecare de pe stadionul Michael Kelin sau
+							Gradina zoologica. Programul si locatia varianza in functie de
+							vreme
+						</Typography>
+						<Typography fontWeight={'900'} variant='body1'>
+							Pret: 30 lei copil/ 2 ore
+						</Typography>
+					</div>
 				</div>
 				{items.map((item, index) => (
 					<CampItem key={item.id} item={item} isOdd={index % 2 !== 0} />
