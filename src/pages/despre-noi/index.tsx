@@ -25,7 +25,7 @@ const AbouUs = () => {
 					<Typography textAlign={'center'} fontWeight={'600'}>
 						Suntem o echipă de tineri instructori din Hunedoara extrem de
 						pasionați de interacțiunea cu copiii. Avem certificări atât
-						naționale cât și internaționale (ISIA). Munca noastră, pe parcursul
+						naționale cât și internationale. Munca noastră, pe parcursul
 						taberelor pe care le organizăm atât în sezonul rece cât și în cel
 						cald, se bazează pe munca în echipă, comunicarea eficientă,
 						creativitate, flexibilitate și leadership
