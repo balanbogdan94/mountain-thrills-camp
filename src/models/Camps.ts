@@ -21,13 +21,13 @@ export const camps: CampItemType[] = [
 		id: '90bf49ae-29ba-4bae-ab61-49f5a34d5b8a',
 		title: 'MTB Panorama Ghelari',
 		description:
-			'Panorama Ghelari este o atracție turistică impresionantă situată în localitatea Ghelari din județul Hunedoara, România. Cunoscută și sub numele de "Balconul Munților Apuseni", această panoramă oferă o vedere spectaculoasă asupra peisajului muntos din zonă.Panorama Ghelari oferă o oportunitate unică de a admira frumusețea naturală a zonei și de a te conecta cu liniștea și armonia pe care le oferă munții. De aici, poți să te relaxezi și să te bucuri de peisajul impresionant, să faci fotografii memorabile sau să te plimbi pe cărările marcate, explorând în detaliu această zonă sălbatică și fascinantă.',
+			'Vă invităm cu mare bucurie să  înscrieţi copiii în tabăra noastră de MTB şi înot. Oferim oportunitatea de împrietenire cu apa într-un altfel de decor, transformat prin joacă într-un curs specializat alături de Diana Pascu şi Alina Crişan.', 
 		type: CampType.MTB,
 		startDate: new Date('07/17/2023'),
 		endDate: new Date('07/22/2023'),
-		activity: ['Explorarea zonelor din Ghelari', 'Ture pe traseele montane'],
+		activity: ['MTB: învaţă tehnici de mers pe bicicletă pe teren accidentat, vor explora trasee şi vor învăţa cum să se deplaseze în siguranţă pe drumuri accidentate', 'Înot: în fiecare zi copiii vor avea o sesiune de înot în piscina taberei, având în vedere nivelul lor de înot, adaptându-se la cerinţele fiecărui participant;Vă asigurăm că experienţa copiilor în tabăra noastră va fi una memorabilă şi educativă, oferindu-le şansa de a-şi dezvolta abilităţi noi şi de a se bucura de o vară plină de distracţie în aer liber.'],
 		imageSrc:
-			'https://i.ibb.co/tLsgjpd/MTB-Panorama-Ghelari.webp',
+			'https://i.ibb.co/RcYxrqp/O-altfel-de-tabara.webp',
 		price: 1900,
 	},
 	{
@@ -80,9 +80,9 @@ export const camps: CampItemType[] = [
 	},
 	{
 		id: 'd0a513b9-a1ca-407a-8bb6-5ca6f628d8a7',
-		title: 'Drumeție Apuseni',
+		title: 'Tabără preșcolari în Retezat (Pensiunea Clif)',
 		description:
-			'Munții Apuseni este o destinație tradițională. Ne vom aventura pe trasee montane în care vom descoperi: pietrele Boghii, Cheile Somesului Cald, Molhasurile de la Izbuce Focul Viu, Lumea Pierdută,…etc, locuri numai bune pentru a înțelege releieful carstic alcătuit din peșteri, chei și defilee. Varietatea oferită de Apuseni îl face unic la noi în România datorită formelor sculptate de apă în rocile solubile . Pe lângă lecțiile de geneză și geologie predate de peisajul înconjurător, cei mici se vor bucura de aerul curat și pădurile Apusenilor.',
+			'Parc de aventură, tiroliană, excursii și drumetii, jocuri de echipă, jocuri de echilibru, concursuri sportive, karaoke, activități de dezvoltare emoțională, socială și de comunicare, activități de cunoaștere, creare și întărire spirit de echipă, curaj și personalitate, foc de tabără. Echipa noastră propune copiilor o experienţă inedită de dezvoltare personală prin mijloace sportive multivalente şi activităţi asociate în care pasiunea se împleteşte cu buna dispoziţie şi sănătatea cu educaţia.',
 		type: CampType.SUMMER,
 		startDate: new Date('07/23/2023'),
 		endDate: new Date('07/28/2023'),
