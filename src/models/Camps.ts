@@ -76,7 +76,7 @@ export const camps: CampItemType[] = [
 		],
 		price: 1900,
 		imageSrc:
-			'https://zeropointstorage.blob.core.windows.net/images/WhatsApp%20Image%202023-03-29%20at%2019.19.27.webp',
+			'https://i.ibb.co/5YBj903/drumetie-Cioclovina.webp',
 	},
 	{
 		id: 'd0a513b9-a1ca-407a-8bb6-5ca6f628d8a7',
