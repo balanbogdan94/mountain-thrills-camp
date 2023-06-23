@@ -110,7 +110,7 @@ export const camps: CampItemType[] = [
 	},
 	{
 		id: '9fa464ef-8082-4d80-b561-a7b5b49decef',
-		title: 'Tabara comunicare Apuseni',
+		title: 'Tabara comunicare Croația',
 		price: 1900,
 		description:
 			'Tabăra de comunicare dintre părinți și copii este un mediu în care se promovează și se dezvoltă comunicarea sănătoasă și deschisă între cele două generații. Scopul acestei tabere este de a spori înțelegerea reciprocă, de a îmbunătăți relațiile familiale și de a facilita dialogul între părinți și copii.',
