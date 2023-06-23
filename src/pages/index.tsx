@@ -39,7 +39,7 @@ export default function Home() {
 								/>
 							</div>
 							<Typography variant='subtitle2'>
-								Scoală de ski, MTB, Ski, Tabere de vară la munte!
+								  Tabere de vară, Excursii MTB, Tabere ski!
 							</Typography>
 							<Link href={Routes.get('Contact') ?? ''}>
 								<Button variant='contained' color='secondary'>
