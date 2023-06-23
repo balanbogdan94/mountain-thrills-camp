@@ -76,7 +76,7 @@ export default function Home() {
 							link={Routes.get('Tabere de vară') ?? ''}
 						/>
 						<CampTipeItem
-							imgSrc={'/camp-types/Bike.png'}
+							imgSrc={'/camp-types/Bike2.png'}
 							title={'Drumeții MTB'}
 							description={
 								'Ciclismul  este una dintre cele mai bune metode de a te bucura de natură și de beneficiile incontestabile ale pedalatului pe două roți. Te invităm să te bucuri alături de noi pedalând '
