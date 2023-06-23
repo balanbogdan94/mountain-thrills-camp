@@ -18,7 +18,7 @@ export const TeamSection = (props: { variant: 'Simple' | 'Full' }) => (
 				items={
 					<ul className={styles.teamMemberItems}>
 						<li>
-							Peste 10 de ani de experiență ca monitor de schi, acreditat
+							Peste 10 de ani de experiență ca monitor de ski, acreditat
 							internațional
 						</li>
 						<li>Instructor coordonator de tabere vară/ iarnă</li>
@@ -38,7 +38,7 @@ export const TeamSection = (props: { variant: 'Simple' | 'Full' }) => (
 					<ul className={styles.teamMemberItems}>
 						<li>Experiență de 6 ani că monitor de ski</li>
 						<li>
-							Monitor schi (Internațional Schi Instructor Associations-ISIA)
+							Monitor ski 
 						</li>
 					</ul>
 				}
@@ -56,8 +56,7 @@ export const TeamSection = (props: { variant: 'Simple' | 'Full' }) => (
 					<ul className={styles.teamMemberItems}>
 						<li>Ghid turist național</li>
 						<li>
-							Monitor snowboard și schi(Internațional Schi Instructor
-							Associations-ISIA)
+							Monitor snowboard și ski
 						</li>
 					</ul>
 				}
@@ -75,7 +74,7 @@ export const TeamSection = (props: { variant: 'Simple' | 'Full' }) => (
 					<ul className={styles.teamMemberItems}>
 						<li>Experiență de peste 7 ani</li>
 						<li>
-							Monitor schi (Internațional Schi Instructor Associations-ISIA)
+							Monitor ski 
 						</li>
 						<li>Alpinist calificat</li>
 					</ul>
@@ -94,7 +93,7 @@ export const TeamSection = (props: { variant: 'Simple' | 'Full' }) => (
 					<ul className={styles.teamMemberItems}>
 						<li>Ghid turist national</li>
 						<li>
-							Monitor Ski (International Schi Instructor Association-ISIA)
+							Monitor Ski 
 						</li>
 					</ul>
 				}
