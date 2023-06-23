@@ -128,15 +128,15 @@ export const camps: CampItemType[] = [
 ];
 
 export const heroCampTypes = [
-	{ text: 'Tabere de vara', imageSrc: './benefits/tabereVara.png' },
+	{ text: 'Tabere de vara', imageSrc: './benefits/taberedevara2.png' },
 	{
 		text: 'Tabere de comunicare (parintii si copii)',
 		imageSrc: './benefits/tabereComunicare.png',
 	},
 	{
 		text: 'Excursii cu bicicleta',
-		imageSrc: './benefits/excursiiBicicleta.png',
+		imageSrc: './benefits/excursiicubicicleta.png',
 	},
-	{ text: 'Initieri MTB', imageSrc: './benefits/initieriMTB.png' },
+	{ text: 'Initieri MTB', imageSrc: './benefits/initieriMTB3.png' },
 	{ text: 'Tabere de SKI', imageSrc: './benefits/tabereSki.png' },
 ];
