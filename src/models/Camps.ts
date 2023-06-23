@@ -27,7 +27,7 @@ export const camps: CampItemType[] = [
 		endDate: new Date('07/22/2023'),
 		activity: ['Explorarea zonelor din Ghelari', 'Ture pe traseele montane'],
 		imageSrc:
-			'https://zeropointstorage.blob.core.windows.net/images/WhatsApp%20Image%202023-03-29%20at%2019.21.15.webp',
+			'https://i.ibb.co/tLsgjpd/MTB-Panorama-Ghelari.webp',
 		price: 2100,
 	},
 	{
@@ -44,7 +44,7 @@ export const camps: CampItemType[] = [
 			'Vizitarea muzeului satului',
 		],
 		imageSrc:
-			'https://zeropointstorage.blob.core.windows.net/images/WhatsApp%20Image%202023-03-29%20at%2020.05.59.webp',
+			'https://i.ibb.co/Jv4jH66/MTB-Viscri.webp',
 		price: 1900,
 	},
 	{
