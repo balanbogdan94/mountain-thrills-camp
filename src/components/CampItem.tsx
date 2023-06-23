@@ -21,7 +21,7 @@ const CampItem: React.FC<CampItemProps> = ({ item, isOdd }) => {
 				<Image unoptimized fill src={item.imageSrc} alt='' />
 				<div className={styles.price}>
 					<Typography variant='h6' fontWeight={900}>
-						{item.price} RON
+						{item.price} LEI
 					</Typography>
 				</div>
 			</div>

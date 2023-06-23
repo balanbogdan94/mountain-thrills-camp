@@ -28,7 +28,7 @@ export const camps: CampItemType[] = [
 		activity: ['Explorarea zonelor din Ghelari', 'Ture pe traseele montane'],
 		imageSrc:
 			'https://i.ibb.co/tLsgjpd/MTB-Panorama-Ghelari.webp',
-		price: 2100,
+		price: 1900,
 	},
 	{
 		id: '9fbff486-83fa-424d-9619-ec29715636ed',
@@ -45,7 +45,7 @@ export const camps: CampItemType[] = [
 		],
 		imageSrc:
 			'https://i.ibb.co/Jv4jH66/MTB-Viscri.webp',
-		price: 1900,
+		price: 1800,
 	},
 	{
 		id: '87c6a349-9f84-44e1-8354-6ee994f326c2',
@@ -58,7 +58,7 @@ export const camps: CampItemType[] = [
 		activity: ['Explorarea zonelor din Sălașul de Sus'],
 		imageSrc:
 			'https://zeropointstorage.blob.core.windows.net/images/liviu-c-9HQiKoSlK_o-unsplash.webp',
-		price: 2100,
+		price: 1900,
 	},
 	{
 		id: '148fdd56-5dd9-4d83-9166-2cbd8ebe1879',
@@ -74,7 +74,7 @@ export const camps: CampItemType[] = [
 			'Orientare în mediul montan',
 			'Jocuri și concursuri outdoor ',
 		],
-		price: 1900,
+		price: 1800,
 		imageSrc:
 			'https://i.ibb.co/5YBj903/drumetie-Cioclovina.webp',
 	},
@@ -91,7 +91,7 @@ export const camps: CampItemType[] = [
 			'Jocuri și concursuri outdoor ',
 			'Noțiuni de supraviețuire',
 		],
-		price: 2100,
+		price: 1900,
 		imageSrc:
 			'https://zeropointstorage.blob.core.windows.net/images/Tabere-copii-2022-munte.webp',
 	},
@@ -111,7 +111,7 @@ export const camps: CampItemType[] = [
 	{
 		id: '9fa464ef-8082-4d80-b561-a7b5b49decef',
 		title: 'Tabara comunicare Apuseni',
-		price: 2100,
+		price: 1900,
 		description:
 			'Tabăra de comunicare dintre părinți și copii este un mediu în care se promovează și se dezvoltă comunicarea sănătoasă și deschisă între cele două generații. Scopul acestei tabere este de a spori înțelegerea reciprocă, de a îmbunătăți relațiile familiale și de a facilita dialogul între părinți și copii.',
 		type: CampType.SUMMER,
