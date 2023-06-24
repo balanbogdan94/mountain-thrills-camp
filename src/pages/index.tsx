@@ -38,7 +38,7 @@ export default function Home() {
 								/>
 							</div>
 							<Typography variant='subtitle2'>
-								  Tabere de vară, Excursii MTB, Tabere ski!
+								Tabere de vară, Excursii MTB, Tabere ski!
 							</Typography>
 							<Link href={Routes.get('Contact') ?? ''}>
 								<Button variant='contained' color='secondary'>
@@ -75,7 +75,7 @@ export default function Home() {
 							link={Routes.get('Tabere de vară') ?? ''}
 						/>
 						<CampTipeItem
-							imgSrc={'/camp-types/Bike2.png'}
+							imgSrc={'/camp-types/bike2.png'}
 							title={'Drumeții MTB'}
 							description={
 								'Ciclismul  este una dintre cele mai bune metode de a te bucura de natură și de beneficiile incontestabile ale pedalatului pe două roți. Te invităm să te bucuri alături de noi pedalând '

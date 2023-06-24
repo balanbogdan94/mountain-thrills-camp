@@ -21,13 +21,15 @@ export const camps: CampItemType[] = [
 		id: '90bf49ae-29ba-4bae-ab61-49f5a34d5b8a',
 		title: 'MTB Panorama Ghelari',
 		description:
-			'Vă invităm cu mare bucurie să  înscrieţi copiii în tabăra noastră de MTB şi înot. Oferim oportunitatea de împrietenire cu apa într-un altfel de decor, transformat prin joacă într-un curs specializat alături de Diana Pascu şi Alina Crişan.', 
+			'Vă invităm cu mare bucurie să  înscrieţi copiii în tabăra noastră de MTB şi înot. Oferim oportunitatea de împrietenire cu apa într-un altfel de decor, transformat prin joacă într-un curs specializat alături de Diana Pascu şi Alina Crişan.',
 		type: CampType.MTB,
 		startDate: new Date('07/17/2023'),
 		endDate: new Date('07/22/2023'),
-		activity: ['MTB: învaţă tehnici de mers pe bicicletă pe teren accidentat, vor explora trasee şi vor învăţa cum să se deplaseze în siguranţă pe drumuri accidentate', 'Înot: în fiecare zi copiii vor avea o sesiune de înot în piscina taberei, având în vedere nivelul lor de înot, adaptându-se la cerinţele fiecărui participant;Vă asigurăm că experienţa copiilor în tabăra noastră va fi una memorabilă şi educativă, oferindu-le şansa de a-şi dezvolta abilităţi noi şi de a se bucura de o vară plină de distracţie în aer liber.'],
-		imageSrc:
-			'https://i.ibb.co/RcYxrqp/O-altfel-de-tabara.webp',
+		activity: [
+			'MTB: învaţă tehnici de mers pe bicicletă pe teren accidentat, vor explora trasee şi vor învăţa cum să se deplaseze în siguranţă pe drumuri accidentate',
+			'Înot: în fiecare zi copiii vor avea o sesiune de înot în piscina taberei, având în vedere nivelul lor de înot, adaptându-se la cerinţele fiecărui participant;Vă asigurăm că experienţa copiilor în tabăra noastră va fi una memorabilă şi educativă, oferindu-le şansa de a-şi dezvolta abilităţi noi şi de a se bucura de o vară plină de distracţie în aer liber.',
+		],
+		imageSrc: 'https://i.ibb.co/RcYxrqp/O-altfel-de-tabara.webp',
 		price: 1900,
 	},
 	{
@@ -43,8 +45,7 @@ export const camps: CampItemType[] = [
 			'Ture prin sat',
 			'Vizitarea muzeului satului',
 		],
-		imageSrc:
-			'https://i.ibb.co/Jv4jH66/MTB-Viscri.webp',
+		imageSrc: 'https://i.ibb.co/Jv4jH66/MTB-Viscri.webp',
 		price: 1800,
 	},
 	{
@@ -75,8 +76,7 @@ export const camps: CampItemType[] = [
 			'Jocuri și concursuri outdoor ',
 		],
 		price: 1800,
-		imageSrc:
-			'https://i.ibb.co/5YBj903/drumetie-Cioclovina.webp',
+		imageSrc: 'https://i.ibb.co/5YBj903/drumetie-Cioclovina.webp',
 	},
 	{
 		id: 'd0a513b9-a1ca-407a-8bb6-5ca6f628d8a7',
@@ -128,7 +128,7 @@ export const camps: CampItemType[] = [
 ];
 
 export const heroCampTypes = [
-	{ text: 'Tabere de vara', imageSrc: './benefits/taberedevara2.png' },
+	{ text: 'Tabere de vara', imageSrc: './benefits/Taberedevara2.png' },
 	{
 		text: 'Tabere de comunicare (parintii si copii)',
 		imageSrc: './benefits/tabereComunicare.png',
