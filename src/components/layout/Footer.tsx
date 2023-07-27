@@ -14,8 +14,9 @@ import Link from 'next/link';
 import style from './Footer.module.css';
 import Image from 'next/image';
 import { navItems } from '@/models/Routes';
-
+// ! Refactor CSS
 const Footer = () => {
+	// ? TODO: Better media query
 	const matches = useMediaQuery('(width < 768px)');
 	return matches ? (
 		<Grid className={style.container} container rowGap={'40px'}>

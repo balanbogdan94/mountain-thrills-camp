@@ -10,7 +10,7 @@ type CampItemProps = {
 	item: CampItemType;
 	isOdd: boolean;
 };
-
+// TODO : rename isOdd with alignType={left, right}
 const CampItem: React.FC<CampItemProps> = ({ item, isOdd }) => {
 	return (
 		<Stack key={item.id} className={styles.itemContainer}>

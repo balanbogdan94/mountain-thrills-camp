@@ -12,11 +12,14 @@ import { Routes } from '@/models/Routes';
 import CampsCarousel from '@/components/CampsCarousel';
 import { heroCampTypes } from '@/models/Camps';
 import HeroCampTypeItem from '@/components/HeroCampTypeItem';
-
+//   TODO: review code and add comments
+// ? TODO: add internationalization
+// ! TODO: review accessibility
 export default function Home() {
 	const theme = useTheme();
 	return (
 		<>
+			{/* { TODO: Create Head component } */}
 			<Head>
 				<title>Zero Point</title>
 				<meta name='description' content='Home page of Zero Point' />
@@ -29,6 +32,9 @@ export default function Home() {
 					<Stack className={styles.heroBanner}>
 						<Stack className={styles.heroContent} alignItems={'center'}>
 							<div className={styles.title}>
+								{/* TODO: optimize images
+								     TODO: Add font instead of image
+								 */}
 								<Image
 									unoptimized
 									src={'/title.svg'}
@@ -40,6 +46,7 @@ export default function Home() {
 							<Typography variant='subtitle2'>
 								Tabere de vară, Excursii MTB, Tabere ski!
 							</Typography>
+							{/* TODO: Use typesript types */}
 							<Link href={Routes.get('Contact') ?? ''}>
 								<Button variant='contained' color='secondary'>
 									Contactează-ne
@@ -50,6 +57,7 @@ export default function Home() {
 							<Image unoptimized src={'/hero.png'} alt='hero' fill />
 						</div>
 					</Stack>
+					{/* { ! TODO: Use proper keys} */}
 					<List className={styles.heroCampTypeList}>
 						{heroCampTypes.map((campType, index) => (
 							<HeroCampTypeItem key={index} campType={campType} />
@@ -66,6 +74,7 @@ export default function Home() {
 
 				<Section title='Tipuri de tabere'>
 					<List className={styles.campTypeContainer}>
+						{/* TODO: Use typesript types */}
 						<CampTipeItem
 							imgSrc={'/camp-types/SummerCamp.png'}
 							title={'Tabere de vară'}
@@ -93,6 +102,7 @@ export default function Home() {
 					</List>
 				</Section>
 				<Section title='Obiectivele noastre' className={styles.contrastSection}>
+					{/* TODO: Extract class */}
 					<Stack gap={'30px'} alignItems={'center'} width={'100%'}>
 						<Stack className={styles.benefitsTextContent}>
 							<BenefitItem
@@ -122,6 +132,7 @@ export default function Home() {
 				<Section title='Următoarele tabere'>
 					<CampsCarousel />
 				</Section>
+				{/* TODO: Embed in section */}
 				<div className={styles.formSection}>
 					<FormSection />
 				</div>

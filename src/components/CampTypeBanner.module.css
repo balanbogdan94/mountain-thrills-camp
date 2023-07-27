@@ -12,10 +12,10 @@
     gap: 10px;
 
 }
+
+
 .heroImage {
-    background: url('/pages/ski-camp/hero.webp');
     filter: brightness(50%);
-    background-position: center;
     position: absolute;
     top: 0;
     left: 0;

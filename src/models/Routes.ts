@@ -1,3 +1,4 @@
+// ! Create types for routes
 export const navItems = [
 	{ name: 'Acasă', route: '/' },
 	{ name: 'Despre noi', route: '/despre-noi' },

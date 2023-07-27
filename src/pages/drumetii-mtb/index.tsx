@@ -1,12 +1,12 @@
 import ContactInfoSection from '@/components/ContactInfoSection';
 import NoItemSection from '@/components/NoItemSection';
 import { CampType, camps } from '@/models/Camps';
-import { Button, Stack, Typography } from '@mui/material';
+import { Stack } from '@mui/material';
 import React from 'react';
-import styles from './mtb-trips.module.css';
-import CampTypeIcon from '@/components/CampTypeIcon';
+import styles from './../../styles/common.module.css';
 import CampItem from '@/components/CampItem';
 import Head from 'next/head';
+import CampTypeBanner from '@/components/CampTypeBanner';
 
 const MtbCamp = () => {
 	const items = camps && camps.filter((camp) => camp.type === CampType.MTB);
@@ -22,21 +22,20 @@ const MtbCamp = () => {
 	};
 
 	if (items.length === 0) return <NoItemSection />;
+	// ! Read about head in nextjs
 	return (
 		<>
 			<Head>
-				<title>Zero Point</title>
+				<title>Zero Point - Drumetii Mtb</title>
 				<meta name='description' content='Home page of Zero Point' />
 				<link rel='icon' href='/logo.ico' />
 			</Head>
 			<Stack alignItems={'center'} gap={'100px'}>
-				<div className={styles.heroContainer}>
-					<div className={styles.heroImage} />
-					<div className={styles.heroIcon}>
-						<CampTypeIcon type={CampType.MTB} />
-					</div>
-					<Typography variant='h2'>Drumeții MTB</Typography>
-				</div>
+				<CampTypeBanner
+					text={'Drumeții MTB'}
+					campType={CampType.SKY}
+					imageUrl={'./pages/mtb-trips/banner.jpg'}
+				/>
 				{items.map((item, index) => (
 					<CampItem key={item.id} item={item} isOdd={index % 2 !== 0} />
 				))}
@@ -55,4 +54,5 @@ const MtbCamp = () => {
 	);
 };
 
+// ! TODO: read about exports
 export default MtbCamp;

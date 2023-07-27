@@ -1,0 +1,6 @@
+
+.announce {
+    box-shadow: 0px 2px 12px rgba(195, 195, 195, 0.15);
+    padding: var(--padding-top-mobile) calc(2*var(--padding-top-mobile));
+    text-align: center;
+}

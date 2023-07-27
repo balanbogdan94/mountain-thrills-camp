@@ -17,6 +17,7 @@ import Image from 'next/image';
 import { navItems } from '@/models/Routes';
 
 const MenuList = () => {
+	// ? TODO: See if we can replace useRouter
 	const router = useRouter();
 	return (
 		<List className={`${style.menuItems}`}>
@@ -62,6 +63,7 @@ const Header = () => {
 				</Toolbar>
 			</AppBar>
 			<Box>
+				{/* {TODO: align nice the menu items} */}
 				<Drawer
 					variant='temporary'
 					anchor='top'

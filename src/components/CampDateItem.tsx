@@ -1,7 +1,7 @@
 import { Stack, Typography } from '@mui/material';
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import React from 'react';
-
+// TODO: refactor code logic to be more readable
 const CampDateItem = (props: { startDate: Date; endDate: Date }) => {
 	const formatStartDate = props.startDate.toLocaleDateString('en-GB', {
 		// you can use undefined as first argument
@@ -23,7 +23,7 @@ const CampDateItem = (props: { startDate: Date; endDate: Date }) => {
 };
 
 export default CampDateItem;
-
+//TODO: Add documentation
 function getMonth2Digits(date: Date) {
 	const month = String(date.getMonth() + 1).padStart(2, '0');
 

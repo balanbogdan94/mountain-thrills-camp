@@ -9,7 +9,7 @@ const breakpoints = {
 		xl: 1920,
 	},
 };
-
+//TODO: create theme from css variables
 const theme = createTheme({
 	breakpoints,
 	palette: {
