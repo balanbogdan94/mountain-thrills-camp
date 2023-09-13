@@ -8,24 +8,26 @@
   position: relative;
 }
 
-.hero{
+.hero {
   width: 100%;
+  height: calc(100vh - var(--header-height));
+  display: grid;
+  grid-template-columns: minmax(200px, 1fr) minmax(500px, 1fr);
 }
 
-.heroBanner{
+.heroBanner {
   flex-direction: column;
   margin-bottom: 25px;
-  padding-top: var(--padding-top-mobile);
 }
 
-.heroImage{ 
+.heroImage {
   width: 100%;
   aspect-ratio: 4/3;
-  position: relative; 
+  position: relative;
 }
 
 .heroImage > img {
-   object-fit: 'contain'
+  object-fit: "contain";
 }
 
 .heroContent {
@@ -44,21 +46,18 @@
   align-items: center;
 }
 
-
 .title {
   position: relative;
   width: 250px;
   aspect-ratio: 2/1;
 }
 
-.video{
+.video {
   width: 90%;
   aspect-ratio: 1/1;
   border-radius: 10px;
   margin-bottom: 35px;
 }
-
-
 
 .contrastSection {
   background-color: var(--color-background-secondary);
@@ -71,7 +70,6 @@
   gap: 25px;
 }
 
-
 .benefitsTextContent {
   display: flex;
   flex-direction: column;
@@ -79,31 +77,29 @@
   max-width: 80%;
 }
 
-.formSection{
-  position: relative;;
+.formSection {
+  position: relative;
 }
 
-.Splah{
+.Splah {
   position: absolute;
   top: 0;
   left: 0;
-  background-image: url('/header-splash.svg');
+  background-image: url("/header-splash.svg");
   background-size: contain;
-  width: clamp(100px,15vw,200px);
+  width: clamp(100px, 15vw, 200px);
   aspect-ratio: 1/1;
   background-repeat: no-repeat;
   z-index: 0;
 }
 
-
-
 @media screen and (width > 768px) {
-  .heroBanner{
+  /* .heroBanner {
     flex-direction: row;
     margin-bottom: unset;
-
-  }
-  .heroContent {
+    height: 100%;
+  } */
+  /* .heroContent {
     flex: 1;
     padding-top: unset;
     align-items: flex-start;
@@ -111,11 +107,9 @@
 
   .heroContent > * {
     text-align: left;
-  }
+  } */
 
-
-
-  .heroImage{
+  .heroImage {
     width: 50%;
     flex: 0 0 60%;
     aspect-ratio: unset;
@@ -126,63 +120,60 @@
   .heroImage > img {
     object-fit: contain;
     object-position: right;
- }
+  }
 
- .heroCampTypeList{
-  padding: 12px 24px;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: flex-start;
-  box-shadow: 0px 2px 12px rgba(195, 195, 195, 0.25);
+  .heroCampTypeList {
+    padding: 12px 24px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    box-shadow: 0px 2px 12px rgba(195, 195, 195, 0.25);
+  }
+
+  .campTypeContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .teamContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .title {
+    width: 400px;
+  }
+  .characteristicsContainer {
+    width: 100%;
+    position: relative;
+  }
+  .video {
+    width: min(75vw, 900px);
+    aspect-ratio: 16/9;
+  }
+
+  .benefitsTextContent {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: flex-start;
+    max-width: 100%;
+    width: 100%;
+    justify-content: space-between;
+    padding: 30px;
+  }
+
+  .benefitsTextContent > li {
+    max-width: min(20vw, 30ch);
+    justify-content: flex-start;
+  }
+
+  .benefitsTextContent > li > div {
+    align-items: flex-start;
+  }
+
+  .benefitsTextContent > li > div > p {
+    text-align: left;
+  }
 }
-
- .campTypeContainer{
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
- }
-
- .teamContainer {
-  flex-direction: row;
-  flex-wrap: wrap;
- }
-.title{
-  width: 400px;
-}
- .characteristicsContainer {
-  width: 100%;
-  position: relative;
- }
-.video{
-  width: min(75vw, 900px);
-  aspect-ratio: 16/9;
-}
-
- .benefitsTextContent{
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 30px;
-  align-items: flex-start;
-  max-width: 100%;
-  width: 100%;
-  justify-content: space-between;
-  padding: 30px;
- }
-
- .benefitsTextContent > li {
-  max-width: min(20vw, 30ch);
-  justify-content: flex-start;
- }
-
- .benefitsTextContent > li > div {
-   align-items: flex-start;
- }
-
- .benefitsTextContent > li > div > p {
-  text-align: left;
- }
-}
-  
-
-

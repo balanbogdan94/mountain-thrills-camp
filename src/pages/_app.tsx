@@ -1,7 +1,7 @@
 import '@/styles/globals.css';
 import theme from '@/styles/theme';
 import { CacheProvider, EmotionCache, ThemeProvider } from '@emotion/react';
-import { CssBaseline } from '@mui/material';
+import { CssBaseline, Experimental_CssVarsProvider } from '@mui/material';
 import type { AppProps } from 'next/app';
 import createEmotionCache from '../../config/createEmotionCache';
 import MountainThrillsCampLayout from '../components/layout/MountainThrillsCampLayout';

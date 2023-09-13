@@ -54,5 +54,4 @@ const MtbCamp = () => {
 	);
 };
 
-// ! TODO: read about exports
 export default MtbCamp;
