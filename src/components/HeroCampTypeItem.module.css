@@ -1,17 +1,4 @@
-
-.heroCampTypeItem {
-    width: var(--circle-image-width);
+.heroCampTypeItemImage {
+  border: 5px solid var(--color-background-secondary);
+  border-radius: var(--full-image-circle);
 }
-
-.heroCampTypeItemImage{
-    position: relative;
-    width: 100%;
-    aspect-ratio: 1/1;
-    border: 5px solid var(--color-background-secondary);
-    border-radius: var(--full-image-circle);
-  }
-  
-.heroCampTypeItemImage > img {
-    object-fit: contain;
-    border-radius: var(--full-image-circle);
-  } 

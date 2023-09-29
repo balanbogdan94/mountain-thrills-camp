@@ -2,21 +2,23 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "@/styles/pages/Home.module.css";
 import { Button, List, Stack, Typography, useTheme } from "@mui/material";
-import CampTipeItem from "../components/CampTipeItem";
+import CampTypeItem from "../components/CampTipeItem";
 import { Section } from "../components/layout/Section";
 import FormSection from "../components/FormSection";
 import Link from "next/link";
 import { BenefitItem } from "@/components/BenefitItem";
 import { TeamSection } from "@/components/TeamSection";
-import { Routes } from "@/models/Routes";
+import ZeroPointRoutes from "@/models/Routes";
 import CampsCarousel from "@/components/CampsCarousel";
-import { heroCampTypes } from "@/models/Camps";
-import HeroCampTypeItem from "@/components/HeroCampTypeItem";
+import { CampActivities, campTypes } from "@/models/Camps";
+import ActivityItem from "@/components/HeroCampTypeItem";
+import { lovedByTheKing } from "@/styles/fonts";
+import { benefitItems } from "@/models/Benefits";
 //   TODO: review code and add comments
 // ? TODO: add internationalization
 // ! TODO: review accessibility
+
 export default function Home() {
-  const theme = useTheme();
   return (
     <>
       {/* { TODO: Create Head component }  Add OG images*/}
@@ -28,19 +30,17 @@ export default function Home() {
       </Head>
       <div className={styles.main}>
         <div className={styles.Splah} />
-        <section className={styles.hero}>
-          <Stack className={styles.heroContent} alignItems={"center"}>
-            <div className={styles.title}>
-              {/* TODO: optimize images
-								     TODO: Add font instead of image
-								 */}
-              <h1>Hai cu noi in aventura</h1>
-            </div>
+        <section className={styles.heroContainer}>
+          <Stack
+            className={`${styles.callToActionRoot} ${lovedByTheKing.variable}`}
+          >
+            <Typography variant="h1" className={styles.callToActionTitle}>
+              Hai cu noi în <b className={styles.titleHighlighted}>aventura</b>
+            </Typography>
             <Typography variant="subtitle2">
               Tabere de vară, Excursii MTB, Tabere ski!
             </Typography>
-            {/* TODO: Use typesript types */}
-            <Link href={Routes.get("Contact") ?? ""}>
+            <Link href={ZeroPointRoutes.Contact.path}>
               <Button variant="contained" color="secondary">
                 Contactează-ne
               </Button>
@@ -49,13 +49,18 @@ export default function Home() {
           <div className={styles.heroImage}>
             <Image unoptimized src={"/hero.webp"} alt="hero" fill />
           </div>
-          {/* { ! TODO: Use proper keys} */}
         </section>
-        <List className={styles.heroCampTypeList}>
-          {heroCampTypes.map((campType, index) => (
-            <HeroCampTypeItem key={index} campType={campType} />
-          ))}
-        </List>
+        <section>
+          <List className={styles.activitiesContainer}>
+            {CampActivities.map((activities) => (
+              <ActivityItem
+                key={activities.text}
+                imageSrc={activities.imageSrc}
+                text={activities.text}
+              />
+            ))}
+          </List>
+        </section>
         <Section title={"Despre noi"}>
           <iframe
             src="https://www.youtube.com/embed/9SRFL8wrrzA"
@@ -64,71 +69,41 @@ export default function Home() {
             allowFullScreen
           ></iframe>
         </Section>
-
         <Section title="Tipuri de tabere">
           <List className={styles.campTypeContainer}>
-            {/* TODO: Use typesript types */}
-            <CampTipeItem
-              imgSrc={"/camp-types/SummerCamp.png"}
-              title={"Tabere de vară"}
-              description={
-                "Taberele de vară  sunt o oportunitate pentru fiecare copil pentru a-și dezvolta anumite abilități, dar și pentru a se distra, socializa și pentru a lega noi prietenii"
-              }
-              link={Routes.get("Tabere de vară") ?? ""}
-            />
-            <CampTipeItem
-              imgSrc={"/camp-types/bike2.png"}
-              title={"Drumeții MTB"}
-              description={
-                "Ciclismul  este una dintre cele mai bune metode de a te bucura de natură și de beneficiile incontestabile ale pedalatului pe două roți. Te invităm să te bucuri alături de noi pedalând "
-              }
-              link={Routes.get("Tabere MTB") ?? ""}
-            />
-            <CampTipeItem
-              imgSrc={"/camp-types/Ski.png"}
-              title={"Tabere SKI"}
-              description={
-                "Taberele de schi și snowboard oferă copiiilor și adolesceților ocazia de a învăța să schieze și să se dea pe snowboard sub atenta îndrumare a unei echipe de monitori cu experiență și foști schiori de performanță"
-              }
-              link={Routes.get("Tabere SKI") ?? ""}
-            />
+            {campTypes.map((ct) => (
+              <CampTypeItem
+                key={ct.title}
+                imgSrc={ct.imgSrc}
+                title={ct.title}
+                description={ct.description}
+                link={ct.link}
+              />
+            ))}
           </List>
         </Section>
-        <Section title="Obiectivele noastre" className={styles.contrastSection}>
-          {/* TODO: Extract class */}
-          <Stack gap={"30px"} alignItems={"center"} width={"100%"}>
-            <Stack className={styles.benefitsTextContent}>
+        <Section
+          title="Obiectivele noastre"
+          className={styles.objectivesContainerRoot}
+        >
+          <Stack className={styles.objectivesContent}>
+            {benefitItems.map((bi) => (
               <BenefitItem
-                icon={"/objectives/ExercitiuFizic.svg"}
-                title="Exercițiu fizic"
-                description="Promovarea exercițiului fizic, în aer liber, baza fiind schi-ul și biking-ul, desfășurat în deplină siguranță"
+                key={bi.title}
+                icon={bi.icon}
+                title={bi.title}
+                description={bi.description}
               />
-              <BenefitItem
-                icon={"/objectives/Educare.svg"}
-                title="Educare"
-                description="Educare prin sport și exercițiu fizic organizat, adoptarea unui stil de viață sănătos, precum și conectarea cu natura"
-              />
-              <BenefitItem
-                icon={"/objectives/ActivitatiRecreative.svg"}
-                title="Activități recreative"
-                description="Organizarea de activități recreative atât pentru copii cât și pentru familii"
-              />
-              <BenefitItem
-                icon={"/objectives/Dezvoltare.svg"}
-                title="Dezvoltare"
-                description="Motivarea pentru dezvoltarea capacităților fizice, a spiritului de echipă, a fair-play-ului și a competivități "
-              />
-            </Stack>
+            ))}
           </Stack>
         </Section>
         <TeamSection variant="Simple" />
         <Section title="Următoarele tabere">
           <CampsCarousel />
         </Section>
-        {/* TODO: Embed in section */}
-        <div className={styles.formSection}>
+        <section className={styles.formSection}>
           <FormSection />
-        </div>
+        </section>
       </div>
     </>
   );

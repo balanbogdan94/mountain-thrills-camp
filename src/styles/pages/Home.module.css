@@ -8,79 +8,6 @@
   position: relative;
 }
 
-.hero {
-  width: 100%;
-  height: calc(100vh - var(--header-height));
-  display: grid;
-  grid-template-columns: minmax(200px, 1fr) minmax(500px, 1fr);
-}
-
-.heroBanner {
-  flex-direction: column;
-  margin-bottom: 25px;
-}
-
-.heroImage {
-  width: 100%;
-  aspect-ratio: 4/3;
-  position: relative;
-}
-
-.heroImage > img {
-  object-fit: "contain";
-}
-
-.heroContent {
-  gap: 14px;
-  justify-content: center;
-  margin: 0 auto;
-  max-width: 40ch;
-  z-index: 1;
-}
-
-.heroCampTypeList {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-  width: 100%;
-  align-items: center;
-}
-
-.title {
-  position: relative;
-  width: 250px;
-  aspect-ratio: 2/1;
-}
-
-.video {
-  width: 90%;
-  aspect-ratio: 1/1;
-  border-radius: 10px;
-  margin-bottom: 35px;
-}
-
-.contrastSection {
-  background-color: var(--color-background-secondary);
-  color: var(--color-foreground-secondary);
-}
-
-.campTypeContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-}
-
-.benefitsTextContent {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  max-width: 80%;
-}
-
-.formSection {
-  position: relative;
-}
-
 .Splah {
   position: absolute;
   top: 0;
@@ -93,22 +20,94 @@
   z-index: 0;
 }
 
-@media screen and (width > 768px) {
-  /* .heroBanner {
-    flex-direction: row;
-    margin-bottom: unset;
-    height: 100%;
-  } */
-  /* .heroContent {
-    flex: 1;
-    padding-top: unset;
-    align-items: flex-start;
+.heroContainer {
+  width: 100%;
+  height: calc(100vh - var(--header-height));
+  display: grid;
+  grid-template-columns: 1fr;
+
+  .callToActionRoot {
+    gap: 14px;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 40ch;
+    z-index: 1;
+
+    .callToActionTitle {
+      font-family: var(--font-loved-by-the-king);
+      font-size: 72px;
+      line-height: 68px;
+      text-align: center;
+      .titleHighlighted {
+        color: #52b8e8;
+      }
+      @media screen and (width > 768px) {
+        width: 400px;
+      }
+    }
   }
+  .heroImage {
+    width: 100%;
+    aspect-ratio: 4/3;
+    position: relative;
+    align-self: flex-end;
+    .heroImage:first-child {
+      object-fit: contain;
+    }
+  }
+}
 
-  .heroContent > * {
-    text-align: left;
-  } */
+.activitiesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+  align-items: center;
+  margin: var(--default-vertical-margin) 0px;
+  @media screen and (width > 768px) {
+    padding: 12px 24px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    box-shadow: 0px 2px 12px rgba(195, 195, 195, 0.25);
+  }
+}
 
+.video {
+  width: 90%;
+  aspect-ratio: 1/1;
+  border-radius: 10px;
+  margin-bottom: 35px;
+  @media screen and (width > 768px) {
+    width: min(75vw, 900px);
+    aspect-ratio: 16/9;
+  }
+}
+
+.objectivesContainerRoot {
+  background-color: var(--color-background-secondary);
+  color: var(--color-foreground-secondary);
+  .objectivesContent {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 80%;
+  }
+}
+
+.campTypeContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.formSection {
+  position: relative;
+}
+
+@media screen and (width > 768px) {
   .heroImage {
     width: 50%;
     flex: 0 0 60%;
@@ -122,15 +121,6 @@
     object-position: right;
   }
 
-  .heroCampTypeList {
-    padding: 12px 24px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    box-shadow: 0px 2px 12px rgba(195, 195, 195, 0.25);
-  }
-
   .campTypeContainer {
     flex-direction: row;
     flex-wrap: wrap;
@@ -141,16 +131,10 @@
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .title {
-    width: 400px;
-  }
+
   .characteristicsContainer {
     width: 100%;
     position: relative;
-  }
-  .video {
-    width: min(75vw, 900px);
-    aspect-ratio: 16/9;
   }
 
   .benefitsTextContent {

@@ -6,10 +6,11 @@
   --header-height: 95px;
   --padding-top-mobile: 20px;
   --full-image-circle: 50%;
-  --circle-image-width: 200px;
 
   --color-background-secondary: #267c58;
   --color-foreground-secondary: #ffffff;
+
+  --default-vertical-margin: 35px;
 }
 
 * {

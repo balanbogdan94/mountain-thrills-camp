@@ -1,13 +1,35 @@
-// ! Create types for routes
-export const navItems = [
-	{ name: 'Acasă', route: '/' },
-	{ name: 'Despre noi', route: '/despre-noi' },
-	{ name: 'Tabere de vară', route: '/tabere-vara' },
-	{ name: 'Tabere MTB', route: '/drumetii-mtb' },
-	{ name: 'Tabere SKI', route: '/tabere-ski' },
-	{ name: 'Contact', route: '/contact' },
-];
+type TRoute = {
+  name: string;
+  path: string;
+};
 
-export const Routes: Map<string, string> = new Map<string, string>(
-	navItems.map((i) => [i.name, i.route]),
-);
+const ZeroPointRoutes = {
+  Home: {
+    name: "Acasă",
+    path: "/",
+  },
+  AboutUs: {
+    name: "Despre noi",
+    path: "/despre-noi",
+  },
+  SummerCamp: {
+    name: "Tabere de vară",
+    path: "/tabere-vara",
+  },
+  MtbCamp: {
+    name: "Tabere MTB",
+    path: "/drumetii-mtb",
+  },
+  SkyCamps: {
+    name: "Tabere SKI",
+    path: "/tabere-ski",
+  },
+  Contact: {
+    name: "Contact",
+    path: "/contact",
+  },
+};
+
+export default ZeroPointRoutes;
+
+export const getRouteList: TRoute[] = Object.values(ZeroPointRoutes);
