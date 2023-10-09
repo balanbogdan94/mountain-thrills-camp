@@ -14,6 +14,8 @@ import { CampActivities, campTypes } from "@/models/Camps";
 import ActivityItem from "@/components/HeroCampTypeItem";
 import { lovedByTheKing } from "@/styles/fonts";
 import { benefitItems } from "@/models/Benefits";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { GetStaticProps } from "next";
 //   TODO: review code and add comments
 // ? TODO: add internationalization
 // ! TODO: review accessibility
@@ -108,3 +110,15 @@ export default function Home() {
     </>
   );
 }
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  // extract the locale identifier from the URL
+  const { locale } = context;
+
+  return {
+    props: {
+      // pass the translation props to the page component
+      ...(await serverSideTranslations(locale ?? "en")),
+    },
+  };
+};

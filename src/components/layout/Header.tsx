@@ -1,3 +1,4 @@
+"use client";
 import {
   Box,
   List,
@@ -15,9 +16,11 @@ import style from "./Header.module.css";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import { getRouteList } from "@/models/Routes";
+import { useTranslation } from "next-i18next";
 
 const MenuList = () => {
   // ? TODO: See if we can replace useRouter
+  const { t } = useTranslation();
   const router = useRouter();
   return (
     <List className={`${style.menuItems}`}>
@@ -30,7 +33,7 @@ const MenuList = () => {
             style={{ wordWrap: "unset" }}
             href={item.path}
           >
-            {item.name}
+            {t(item.translationKey)}
           </Link>
         </ListItem>
       ))}
