@@ -25,8 +25,8 @@ export const camps: CampItemType[] = [
     description:
       "Vă invităm cu mare bucurie să  înscrieţi copiii în tabăra noastră de MTB şi înot. Oferim oportunitatea de împrietenire cu apa într-un altfel de decor, transformat prin joacă într-un curs specializat alături de Diana Pascu şi Alina Crişan.",
     type: CampType.MTB,
-    startDate: new Date("07/17/2023"),
-    endDate: new Date("07/22/2023"),
+    startDate: new Date("07/17/2024"),
+    endDate: new Date("07/22/2024"),
     activity: [
       "MTB: învaţă tehnici de mers pe bicicletă pe teren accidentat, vor explora trasee şi vor învăţa cum să se deplaseze în siguranţă pe drumuri accidentate",
       "Înot: în fiecare zi copiii vor avea o sesiune de înot în piscina taberei, având în vedere nivelul lor de înot, adaptându-se la cerinţele fiecărui participant;Vă asigurăm că experienţa copiilor în tabăra noastră va fi una memorabilă şi educativă, oferindu-le şansa de a-şi dezvolta abilităţi noi şi de a se bucura de o vară plină de distracţie în aer liber.",
@@ -40,8 +40,8 @@ export const camps: CampItemType[] = [
     description:
       "Satul Viscri este un pitoresc și fermecător sat tradițional din Transilvania, situat în județul Brașov, România. Cunoscut pentru peisajele sale rurale idilice și pentru patrimoniul său cultural, Viscri a fost inclus în lista Patrimoniului Mondial UNESCO, fiind recunoscut ca unul dintre cele mai bine conservate sate săsești din regiune. O plimbare prin satul Viscri te va purta prin peisaje rurale pitorești, cu dealuri verzi acoperite de pășuni și păduri de fag. Vizitarea acestui sat reprezintă o călătorie în timp și o oportunitate de a te conecta cu istoria și cultura unei comunități săsești unice.",
     type: CampType.MTB,
-    startDate: new Date("08/05/2023"),
-    endDate: new Date("08/12/2023"),
+    startDate: new Date("08/05/2024"),
+    endDate: new Date("08/12/2024"),
     activity: [
       "Explorarea tradițiilor și a obiceiurilor săsești",
       "Ture prin sat",
@@ -56,8 +56,8 @@ export const camps: CampItemType[] = [
     description:
       "Aflat la poalele Munților Poiana Ruscă, Sălașul de Sus este înconjurat de păduri dese, văi adânci și pâraie cristaline. Aici vei găsi o natură nealterată și o liniște reconfortantă. Peisajul montan oferă oportunități excelente pentru drumeții și explorarea naturii.Datorită frumuseții naturale și a tradițiilor autentice, Sălașul de Sus este o destinație populară pentru iubitorii de ecoturism și turism rural. Poți experimenta stilul de viață tradițional, participând la activități meșteșugărești, cum ar fi prelucrarea lemnului sau țesutul.",
     type: CampType.MTB,
-    startDate: new Date("07/10/2023"),
-    endDate: new Date("07/16/2023"),
+    startDate: new Date("07/10/2024"),
+    endDate: new Date("07/16/2024"),
     activity: ["Explorarea zonelor din Sălașul de Sus"],
     imageSrc:
       "https://zeropointstorage.blob.core.windows.net/images/liviu-c-9HQiKoSlK_o-unsplash.webp",
@@ -69,8 +69,8 @@ export const camps: CampItemType[] = [
     description:
       "Parcul Natural Grădiștea Muncelului – Cioclovina cuprinde, între limitele sale, șase dintre cele mai spectaculoase rezervații naturale ale județului Hunedoara: Complexul carstic Ponorici-Cioclovina, Peștera Tecuri, Peștera Șura Mare, Cheile Crivadiei, Platoul Vârtoape, Locul fosilifer Ohaba-Ponor, Peștera Bolii. Totodată, aici se află siturile arheologice aflate în Patrimoniul UNESCO de la Sarmizegetusa Regia, Costești, Blidaru, Luncani-Piatra Roșie și așezările etnografice autentice din Platforma Luncanilor",
     type: CampType.SUMMER,
-    startDate: new Date("06/27/2023"),
-    endDate: new Date("07/02/2023"),
+    startDate: new Date("06/27/2024"),
+    endDate: new Date("07/02/2024"),
     activity: [
       "Vizitarea peșterilor și avenelor din zonă",
       "Prezentarea unor noțiuni speo și a unor noțiuni legate de specificul zonei",
@@ -86,8 +86,8 @@ export const camps: CampItemType[] = [
     description:
       "Parc de aventură, tiroliană, excursii și drumetii, jocuri de echipă, jocuri de echilibru, concursuri sportive, karaoke, activități de dezvoltare emoțională, socială și de comunicare, activități de cunoaștere, creare și întărire spirit de echipă, curaj și personalitate, foc de tabără. Echipa noastră propune copiilor o experienţă inedită de dezvoltare personală prin mijloace sportive multivalente şi activităţi asociate în care pasiunea se împleteşte cu buna dispoziţie şi sănătatea cu educaţia.",
     type: CampType.SUMMER,
-    startDate: new Date("07/23/2023"),
-    endDate: new Date("07/28/2023"),
+    startDate: new Date("07/23/2024"),
+    endDate: new Date("07/28/2024"),
     activity: [
       "Orientare în mediul montan",
       "Jocuri și concursuri outdoor ",
@@ -103,8 +103,8 @@ export const camps: CampItemType[] = [
     description:
       "Bijuteria Carpaților românești, masivul presărat cu 80 de oaze albastre în care se oglindește cerul. Dincolo de frumusețea sa sălbatică și unică și de liniștea absolută pe care ți-o oferă, masivul adăpostește o lume aparținând sprintenelor capre negre și miilor de plante care colorează culmile. În orice punct te conduc potecile, vei descoperi că în Retezat totul freamătă de viaț; natura pură a creat aici peisaje de excepție pentru care merită din plin să străbați cărările muntelui.",
     type: CampType.SUMMER,
-    startDate: new Date("08/13/2023"),
-    endDate: new Date("08/19/2023"),
+    startDate: new Date("08/13/2024"),
+    endDate: new Date("08/19/2024"),
     activity: ["Drumetii montane", "Activitati sportive"],
     price: 1900,
     imageSrc:
@@ -117,8 +117,8 @@ export const camps: CampItemType[] = [
     description:
       "Tabăra de comunicare dintre părinți și copii este un mediu în care se promovează și se dezvoltă comunicarea sănătoasă și deschisă între cele două generații. Scopul acestei tabere este de a spori înțelegerea reciprocă, de a îmbunătăți relațiile familiale și de a facilita dialogul între părinți și copii.",
     type: CampType.SUMMER,
-    startDate: new Date("08/21/2023"),
-    endDate: new Date("08/27/2023"),
+    startDate: new Date("08/21/2024"),
+    endDate: new Date("08/27/2024"),
     activity: [
       "Sesiuni de grup",
       "Jocuri de rol",
@@ -135,8 +135,8 @@ export const camps: CampItemType[] = [
     description:
       "Tabăra de comunicare dintre părinți și copii este un mediu în care se promovează și se dezvoltă comunicarea sănătoasă și deschisă între cele două generații. Scopul acestei tabere este de a spori înțelegerea reciprocă, de a îmbunătăți relațiile familiale și de a facilita dialogul între părinți și copii.",
     type: CampType.SKY,
-    startDate: new Date("08/21/2023"),
-    endDate: new Date("08/27/2023"),
+    startDate: new Date("08/21/2024"),
+    endDate: new Date("08/27/2024"),
     activity: [
       "Sesiuni de grup",
       "Jocuri de rol",
